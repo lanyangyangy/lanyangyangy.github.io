@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>ICT第三次笔记 | 总会有地上的生灵 敢于直面雷霆的威光</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="能复制粘贴就不要手写 主机ping通自己的网关不能排除什么问题     对于一个STP网络，根桥在全网中只有一个，它是整个网络的逻辑中心，但不一定是物理中心。根桥会根据网络拓扑的变化而动态变化。 生成树的生成计算有两大基本度量依据：ID和路径开销。 ID&#x3D;BID(桥ID）+PID（端口ID) BID桥优先级占据高16位，其余的低48位是MAC地址。 在一个STP网络中，某端口到根桥的路">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ICT第三次笔记">
+<meta property="og:url" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E4%B8%89%E6%AC%A1%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:site_name" content="总会有地上的生灵 敢于直面雷霆的威光">
+<meta property="og:description" content="能复制粘贴就不要手写 主机ping通自己的网关不能排除什么问题     对于一个STP网络，根桥在全网中只有一个，它是整个网络的逻辑中心，但不一定是物理中心。根桥会根据网络拓扑的变化而动态变化。 生成树的生成计算有两大基本度量依据：ID和路径开销。 ID&#x3D;BID(桥ID）+PID（端口ID) BID桥优先级占据高16位，其余的低48位是MAC地址。 在一个STP网络中，某端口到根桥的路">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E4%B8%89%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221022140119099.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E4%B8%89%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221026231416465.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E4%B8%89%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221026231126077.png">
+<meta property="article:published_time" content="2023-01-26T04:44:00.000Z">
+<meta property="article:modified_time" content="2023-01-28T12:37:57.039Z">
+<meta property="article:author" content="懒懒当大厨">
+<meta property="article:tag" content="ICT 数通">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E4%B8%89%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221022140119099.png">
+  
+    <link rel="alternate" href="/atom.xml" title="总会有地上的生灵 敢于直面雷霆的威光" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">总会有地上的生灵 敢于直面雷霆的威光</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://lanyangyangy.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-ICT第三次笔记" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/01/26/ICT%E7%AC%AC%E4%B8%89%E6%AC%A1%E7%AC%94%E8%AE%B0/" class="article-date">
+  <time class="dt-published" datetime="2023-01-26T04:44:00.000Z" itemprop="datePublished">2023-01-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      ICT第三次笔记
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>能复制粘贴就不要手写</p>
+<p>主机ping通自己的网关不能排除什么问题</p>
+</blockquote>
+<img src="/2023/01/26/ICT%E7%AC%AC%E4%B8%89%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221022140119099.png" class="" title="image-20221022140119099">
+
+<p> 对于一个STP网络，<strong>根桥在全网中只有一个</strong>，它是整个网络的逻辑中心，但不一定是物理中心。根桥会根据网络拓扑的变化而动态变化。</p>
+<p>生成树的生成计算有两大基本度量依据：<strong>ID</strong>和<strong>路径开销</strong>。</p>
+<p>ID&#x3D;BID(桥ID）+PID（端口ID)</p>
+<p>BID桥优先级占据高16位，其余的低48位是MAC地址。</p>
+<p>在一个STP网络中，某端口到根桥的路径开销就是所经过的各个桥上的出端口的路径开销累加而成，这个值叫做根路径开销。</p>
+<p>$\textcolor{red}{在STP网络中，桥ID最小的设备会被选举为根桥。}$</p>
+<p>生成树：802.1D       802.1W		802.1S </p>
+<p>​                  STP           RSTP           MSTP</p>
+<p><strong>根桥RB</strong></p>
+<p>根桥就是网桥ID最小的桥，通过交互配置BPDU协议报文选出最小的BID。</p>
+<p><strong>根端口RP</strong></p>
+<p>所谓根端口就是去往根桥路径开销最小的端口，根端口负责向根桥方向转发数据，这个端口的选择标准是依据根路径开销判定。在一台设备上所有使能STP的端口中，根路径开销最小者，就是根端口。很显然，在一个运行STP协议的设备上根端口有且只有一个，根桥上没有根端口。</p>
+<ol>
+<li><p>比较根桥ID大小    </p>
+</li>
+<li><p>比较到达根桥累计路径开销 		GE开销为20000         XG 开销为2000		FA(百兆)开销为200000</p>
+</li>
+<li><p>比较邻接交换机的桥ID大小</p>
+</li>
+<li><p>比较发送端口ID大小     选小</p>
+</li>
+<li><p>比较自身端口ID</p>
+<p>一根网线连接一个冲突域</p>
+<p>根桥的端口一般都是指定端口。</p>
+<p><strong>指定端口DP</strong></p>
+<table>
+<thead>
+<tr>
+<th>分类</th>
+<th>指定桥</th>
+<th>指定端口</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>对于一台设备而言</td>
+<td>与本机直接相连并且负责向本机转发配置消息的设备</td>
+<td>指定桥向本机转发配置消息的端口</td>
+</tr>
+<tr>
+<td>对于一个局域网而言</td>
+<td>负责向本网段转发配置消息的设备</td>
+<td>指定桥向本网段转发配置消息的端口</td>
+</tr>
+</tbody></table>
+</li>
+</ol>
+<p>一旦根桥、根端口、指定端口选举成功，则整个树形拓扑建立完毕。在拓扑稳定后，只有根端口和指定端口转发流量，其他的非根非指定端口都处于阻塞（Blocking）状态，它们只接收STP协议报文而不转发用户流量。</p>
+<p>华为默认MSTP</p>
+<p>根桥开销为0，接收开销与发送开销无关。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">dis stp</span><br><span class="line"></span><br><span class="line">dis stp brief</span><br><span class="line"></span><br><span class="line">stp cost xxx 改开销</span><br><span class="line">stp pathcost-standard &#123; dot1d-1998 | dot1t | legacy &#125;  配置端口路径开销计算方法。</span><br><span class="line">stp bridge-diameter diameter 配置网络直径</span><br><span class="line"></span><br><span class="line">interface interface-type interface-number，进入参与生成树协议计算的接口视图。</span><br><span class="line">stp port priority  设置优先级 缺省情况下，交换设备的优先级取值是32768。</span><br><span class="line"></span><br><span class="line">stp timer-factor factor   配置未收到上游的BPDU就重新开始生成树计算的超时时间。</span><br><span class="line">缺省情况下，设备未收到上游的BPDU就重新开始生成树计算的超时时间是Hello Timer的9倍。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h5 id="STP端口状态"><a href="#STP端口状态" class="headerlink" title="STP端口状态"></a>STP端口状态</h5><table>
+<thead>
+<tr>
+<th>端口状态</th>
+<th>目的</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Forwarding</td>
+<td>端口既转发用户流量也处理BPDU报文。</td>
+<td>只有根端口或指定端口才能进入Forwarding状态。</td>
+</tr>
+<tr>
+<td>Learning</td>
+<td>设备会根据收到的用户流量构建MAC地址表，<strong>但不转发用户流量。</strong></td>
+<td><strong>过渡状态</strong>，增加Learning状态防止临时环路。</td>
+</tr>
+<tr>
+<td>Listening</td>
+<td>确定端口角色，将选举出根桥、根端口和指定端口。</td>
+<td><strong>过渡状态。</strong></td>
+</tr>
+<tr>
+<td>Blocking</td>
+<td>端口仅仅接收并处理BPDU，不转发用户流量。</td>
+<td>阻塞端口的最终状态。</td>
+</tr>
+<tr>
+<td>Disabled</td>
+<td>端口不仅不处理BPDU报文，也不转发用户流量。</td>
+<td>端口状态为Down。</td>
+</tr>
+</tbody></table>
+<h5 id="MSTP端口状态"><a href="#MSTP端口状态" class="headerlink" title="MSTP端口状态"></a>MSTP端口状态</h5><table>
+<thead>
+<tr>
+<th>端口状态</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Forwarding</td>
+<td>在这种状态下，端口既转发用户流量又处理BPDU报文。</td>
+</tr>
+<tr>
+<td>Learning</td>
+<td>这是一种过渡状态。在Learning下，交换设备会根据收到的用户流量，构建MAC地址表，但不转发用户流量，所以叫做学习状态。Learning状态的端口处理BPDU报文。</td>
+</tr>
+<tr>
+<td>Discarding</td>
+<td>Discarding状态的端口只接收BPDU报文。</td>
+</tr>
+</tbody></table>
+<p>Discarding&#x3D;Listening+Blocking</p>
+<h6 id="STP参数"><a href="#STP参数" class="headerlink" title="STP参数"></a>STP参数</h6><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>缺省值</th>
+<th>取值范围</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Hello Time</td>
+<td>200厘秒（2秒）</td>
+<td>100～1000</td>
+</tr>
+<tr>
+<td>Max Age(老化时间)</td>
+<td>2000厘秒（20秒）</td>
+<td>600～4000</td>
+</tr>
+<tr>
+<td>Forward Delay</td>
+<td>1500厘秒（15秒）</td>
+<td>400～3000</td>
+</tr>
+</tbody></table>
+<p>一个老化时间20s,一个转发时间15s.</p>
+<p>Learning+Listening&#x3D;30s</p>
+<ul>
+<li>TCN BPDU报文主要用来向上游设备乃至根桥通知拓扑变化。</li>
+<li>置位的TCA标记的配置BPDU报文主要是上游设备用来告知下游设备已经知道拓扑变化，通知下游设备停止发送TCN BPDU报文。</li>
+<li>置位的TC标记的配置BPDU报文主要是上游设备用来告知下游设备拓扑发生变化，请下游设备直接删除桥MAC地址表项，从而达到快速收敛的目的。</li>
+</ul>
+<p>在RSTP中检测拓扑是否发生变化只有一个标准：一个非边缘端口迁移到Forwarding状态。一旦检测到拓扑发生变化，将进行如下处理：</p>
+<ul>
+<li><p>为本交换设备的所有非边缘指定端口启动一个TC While Timer，该计时器值是Hello Time的两倍。</p>
+</li>
+<li><p>在这个时间内，清空所有端口上学习到的MAC地址。同时，由非边缘端口向外发送RST BPDU，其中TC置位。一旦TC While Timer超时，则停止发送RST BPDU。</p>
+</li>
+<li><p>其他交换设备接收到RST BPDU后，清空所有端口学习到MAC地址，除了收到RST BPDU的端口。然后也为自己所有的非边缘指定端口和根端口启动TC While Timer，重复上述过程。</p>
+<p>$\textcolor{red}{RSTP的状态规范把原来的5种状态缩减为3种}$：</p>
+</li>
+<li><ul>
+<li>如果不转发用户流量也不学习MAC地址，那么端口状态就是Discarding状态。</li>
+<li>如果不转发用户流量但是学习MAC地址，那么端口状态就是Learning状态。</li>
+<li>如果既转发用户流量又学习MAC地址，那么端口状态就是Forwarding状态。</li>
+</ul>
+</li>
+</ul>
+<p>支持STP&#x2F;RSTP的设备都有默认的配置，实际应用的配置可以基于默认配置进行修改。</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>缺省值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>生成树协议工作模式</td>
+<td>MSTP模式</td>
+</tr>
+<tr>
+<td>STP&#x2F;RSTP功能</td>
+<td>全局STP&#x2F;RSTP功能使能，端口的STP&#x2F;RSTP功能使能。</td>
+</tr>
+<tr>
+<td>交换设备的优先级</td>
+<td>32768</td>
+</tr>
+<tr>
+<td>端口的优先级</td>
+<td>128</td>
+</tr>
+<tr>
+<td>路径开销的计算方法</td>
+<td>Dot1t，即IEEE 802.1t标准</td>
+</tr>
+<tr>
+<td>Forward Delay Time</td>
+<td>1500厘秒（15秒）</td>
+</tr>
+<tr>
+<td>Hello Time</td>
+<td>200厘秒（2秒）</td>
+</tr>
+<tr>
+<td>Max Age Time</td>
+<td>2000厘秒（20秒）</td>
+</tr>
+</tbody></table>
+<h5 id="将设备配置为根桥："><a href="#将设备配置为根桥：" class="headerlink" title="将设备配置为根桥："></a>将设备配置为根桥：</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">system-view</span><br><span class="line">stp root primary   配置当前设备为根桥设备。</span><br><span class="line">缺省情况下，交换设备不作为任何生成树的根桥。配置后该设备优先级数值自动为0，并且不能更改设备优先级。</span><br></pre></td></tr></table></figure>
+
+<h5 id="将设备配置为备份根桥："><a href="#将设备配置为备份根桥：" class="headerlink" title="将设备配置为备份根桥："></a>将设备配置为备份根桥：</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">system-view</span><br><span class="line">stp root secondary</span><br><span class="line">缺省情况下，交换设备不作为任何生成树的备份根桥。配置后该设备优先级数值为4096，并且不能更改设备优先级。</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="MSTP"><a href="#MSTP" class="headerlink" title="MSTP"></a>MSTP</h4><p><strong>要想设备处于同一MSTP域</strong>，需要：</p>
+<ol>
+<li>都启动了MSTP;</li>
+<li>具有相同的域名；</li>
+<li>具有相同的VLAN到生成树实例映射到配置；</li>
+<li>具有相同的MSTP修订级别配置。</li>
+</ol>
+<p>VLAN默认在实例1</p>
+<p><strong>配置代码</strong>：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">SW1,2,3:</span><br><span class="line">vlan batch 10 20</span><br><span class="line">SW1,2,3:</span><br><span class="line">interface GigabitEthernet 0/0/1</span><br><span class="line">port link-type trunk</span><br><span class="line">port trunk allow-pass vlan 10 20</span><br><span class="line">interface GigabitEthernet 0/0/2</span><br><span class="line">port link-type trunk</span><br><span class="line">port trunk allow-pass vlan 10 20</span><br><span class="line">SW1,2,3:</span><br><span class="line">stp region-configuration </span><br><span class="line">region-name benben #MSTP域名</span><br><span class="line">instance 10 vlan 10</span><br><span class="line">instance 20 vlan 20 #实例到vlan的映射</span><br><span class="line">revision-level 1 #配置修改号</span><br><span class="line">active region-configuration</span><br><span class="line">SW1：</span><br><span class="line">stp instance 10 priority 0</span><br><span class="line">SW2:</span><br><span class="line">stp instance 20 priority 0</span><br></pre></td></tr></table></figure>
+
+<p>MSTI是所有运行STP&#x2F;RSTP&#x2F;MSTP的交换设备经MSTP协议计算后形成的树状网络。</p>
+<p>MST域是多生成树域，由交换网络中的多台交换设备以及它们之间的网段所构成。</p>
+<p>一个局域网可以存在多个MST域，各MST域之间在物理上直接或间接相连。<strong>用户可以通过MSTP配置命令把多台交换设备划分在同一个MST域内。</strong></p>
+<h5 id="域根"><a href="#域根" class="headerlink" title="域根"></a>域根</h5><p>域根（RegionalRoot）分为IST（Internal Spanning Tree）域根和MSTI域根。</p>
+<h6 id="IST域根"><a href="#IST域根" class="headerlink" title="IST域根"></a>IST域根</h6><p>IST在B0、C0和D0中，IST生成树中距离总根（CISTRoot）最近的交换设备是IST域根。</p>
+<img src="/2023/01/26/ICT%E7%AC%AC%E4%B8%89%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221026231416465.png" class="" title="image-20221026231416465">
+
+
+
+<h6 id="MSTI域根"><a href="#MSTI域根" class="headerlink" title="MSTI域根"></a>MSTI域根</h6><p>一个MST域内可以生成多棵生成树，每棵生成树都称为一个MSTI。MSTI域根是每个多生成树实例的树根。域中不同的MSTI有各自的域根。</p>
+<img src="/2023/01/26/ICT%E7%AC%AC%E4%B8%89%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221026231126077.png" class="" title="image-20221026231126077">
+
+<p><strong>MSTI之间彼此独立，MSTI可以与一个或者多个VLAN对应。但一个VLAN只能与一个MSTI对应。</strong></p>
+<h6 id="主桥"><a href="#主桥" class="headerlink" title="主桥"></a><strong>主桥</strong></h6><p>主桥（Master Bridge）也就是ISTMaster，它是域内距离总根最近的交换设备。如<a target="_blank" rel="noopener" href="https://support.huawei.com/enterprise/zh/doc/EDOC1100075491/f7e8e63c#fig_dc_fd_stp_001202">图10-4</a>中的S1。</p>
+<p>如果总根在MST域中，则总根为该域的主桥。</p>
+<h6 id="CST"><a href="#CST" class="headerlink" title="CST"></a>CST</h6><p>公共生成树CST（CommonSpanning Tree）是连接交换网络内所有MST域的一棵生成树。</p>
+<p><strong>IST</strong></p>
+<p>内部生成树IST（InternalSpanning Tree）是各MST域内的一棵生成树。</p>
+<p>IST是一个特殊的MSTI，MSTI的ID为0，通常称为MSTI0。</p>
+<p>IST是CIST在MST域中的一个片段。</p>
+<p><strong>SST构成单生成树SST（SingleSpanning Tree）有两种情况：</strong></p>
+<ul>
+<li>运行STP或RSTP的交换设备只能属于一个生成树。</li>
+<li>MST域中只有一个交换设备，这个交换设备构成单生成树。</li>
+</ul>
+<h5 id="端口角色"><a href="#端口角色" class="headerlink" title="端口角色"></a>端口角色</h5><p>MSTP的端口角色共有7种：根端口、指定端口、Alternate端口、Backup端口、边缘端口、Master端口和域边缘端口</p>
+<table>
+<thead>
+<tr>
+<th>端口角色</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>根端口</td>
+<td>在非根桥上，离根桥最近的端口是本交换设备的根端口。根交换设备没有根端口。根端口负责向树根方向转发数据。</td>
+</tr>
+<tr>
+<td>指定端口</td>
+<td>对一台交换设备而言，它的指定端口是向下游交换设备转发BPDU报文的端口。</td>
+</tr>
+<tr>
+<td>Alternate端口</td>
+<td>从配置BPDU报文发送角度来看，Alternate端口就是由于学习到其它网桥发送的配置BPDU报文而阻塞的端口。从用户流量角度来看，Alternate端口提供了从指定桥到根的另一条可切换路径，作为根端口的备份端口。</td>
+</tr>
+<tr>
+<td>Backup端口</td>
+<td>从配置BPDU报文发送角度来看，Backup端口就是由于学习到自己发送的配置BPDU报文而阻塞的端口。从用户流量角度来看，Backup端口作为指定端口的备份，提供了另外一条从根节点到叶节点的备份通路。</td>
+</tr>
+<tr>
+<td>Master端口</td>
+<td>Master端口是MST域和总根相连的所有路径中最短路径上的端口，它是交换设备上连接MST域到总根的端口。Master端口是域中的报文去往总根的必经之路。Master端口是特殊域边缘端口，Master端口在CIST上的角色是RootPort，在其它各实例上的角色都是Master端口。</td>
+</tr>
+<tr>
+<td>域边缘端口</td>
+<td>域边缘端口是指位于MST域的边缘并连接其它MST域或SST的端口。进行MSTP计算时，域边缘端口在MSTI上的角色和CIST实例的角色保持一致。即如果边缘端口在CIST实例上的角色是Master端口（域和总根相连的所有路径中最短路径上的端口），则它在域内所有MSTI上的角色也是Master端口。</td>
+</tr>
+<tr>
+<td>边缘端口</td>
+<td>如果指定端口位于整个域的边缘，不再与任何交换设备连接，这种端口叫做边缘端口。边缘端口一般与用户终端设备直接连接。端口使能MSTP功能后，会默认启用边缘端口自动探测功能，当端口在（2 × Hello Timer +1）秒的时间内收不到BPDU报文，自动将端口设置为边缘端口，否则设置为非边缘端口。</td>
+</tr>
+</tbody></table>
+<h5 id="端口状态和端口角色对应表"><a href="#端口状态和端口角色对应表" class="headerlink" title="端口状态和端口角色对应表"></a>端口状态和端口角色对应表</h5><table>
+<thead>
+<tr>
+<th>端口状态</th>
+<th>根端口&#x2F;Master端口</th>
+<th>指定端口</th>
+<th>域边缘端口</th>
+<th>Alternate端口</th>
+<th>Backup端口</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Forwarding</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>No</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Learning</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>No</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Discarding</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+</tbody></table>
+<ul>
+<li><h6 id="优先级"><a href="#优先级" class="headerlink" title="优先级"></a>优先级</h6></li>
+<li><p>参与CIST计算的优先级向量为：</p>
+</li>
+</ul>
+<p>{ 根交换设备ID，外部路径开销，域根ID，内部路径开销，指定交换设备ID，指定端口ID，接收端口ID}</p>
+<ul>
+<li><ul>
+<li>参与MSTI计算的优先级向量为：</li>
+</ul>
+</li>
+</ul>
+<p>{ 域根ID，内部路径开销，指定交换设备ID，指定端口ID，接收端口ID}</p>
+<p><strong>同一向量比较，值最小的向量具有最高优先级。</strong></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E4%B8%89%E6%AC%A1%E7%AC%94%E8%AE%B0/" data-id="cldfxvtaa0004vg9ugutq423m" data-title="ICT第三次笔记" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ICT-%E6%95%B0%E9%80%9A/" rel="tag">ICT 数通</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/01/26/ICT%E7%AC%AC%E5%9B%9B%E6%AC%A1%E7%AC%94%E8%AE%B0/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          ICT第四次笔记
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2023/01/26/ICT%E7%AC%AC%E4%BA%8C%E6%AC%A1%E7%AC%94%E8%AE%B0/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">ICT第二次笔记</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ICT-%E6%95%B0%E9%80%9A/" rel="tag">ICT 数通</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/numpy/" rel="tag">numpy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" rel="tag">python 面向对象</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/ICT-%E6%95%B0%E9%80%9A/" style="font-size: 20px;">ICT 数通</a> <a href="/tags/numpy/" style="font-size: 10px;">numpy</a> <a href="/tags/python-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" style="font-size: 10px;">python 面向对象</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/01/">January 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/12/">December 2022</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/01/26/ICT%E7%AC%AC%E5%8D%81%E4%B8%80%E6%AC%A1%E7%AC%94%E8%AE%B0/">ICT第十一次笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2023/01/26/ICT%E7%AC%AC%E5%8D%81%E6%AC%A1%E7%AC%94%E8%AE%B0/">ICT第十次笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2023/01/26/ICT%E7%AC%AC%E4%B9%9D%E6%AC%A1%E7%AC%94%E8%AE%B0/">ICT第九次笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2023/01/26/ICT%E7%AC%AC%E5%85%AB%E6%AC%A1%E7%AC%94%E8%AE%B0/">ICT第八次笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2023/01/26/ICT%E7%AC%AC%E4%B8%83%E6%AC%A1%E7%AC%94%E8%AE%B0/">ICT第七次笔记</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 懒懒当大厨<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

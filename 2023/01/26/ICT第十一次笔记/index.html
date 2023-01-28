@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>ICT第十一次笔记 | 总会有地上的生灵 敢于直面雷霆的威光</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="IS-IS是OSI定协议栈中的CLNS的一部分。 IS-IS在自治系统内采用骨干区域与非骨干区域两级的分层结构：  Level-1路由器部署在非骨干区域。 Level-2路由器和Level-1-1路由器部署在骨干区域。 每一个非骨干区域都通过Level-1-2路由器与骨干网络相连。            实验： R6: 123456[R6]int g0&#x2F;00&#x2F;0[R6-GigabitEtherne">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ICT第十一次笔记">
+<meta property="og:url" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E5%8D%81%E4%B8%80%E6%AC%A1%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:site_name" content="总会有地上的生灵 敢于直面雷霆的威光">
+<meta property="og:description" content="IS-IS是OSI定协议栈中的CLNS的一部分。 IS-IS在自治系统内采用骨干区域与非骨干区域两级的分层结构：  Level-1路由器部署在非骨干区域。 Level-2路由器和Level-1-1路由器部署在骨干区域。 每一个非骨干区域都通过Level-1-2路由器与骨干网络相连。            实验： R6: 123456[R6]int g0&#x2F;00&#x2F;0[R6-GigabitEtherne">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E5%8D%81%E4%B8%80%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221218100646448.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E5%8D%81%E4%B8%80%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221218100840759.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E5%8D%81%E4%B8%80%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221218104112044.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E5%8D%81%E4%B8%80%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221221160523513.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E5%8D%81%E4%B8%80%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221221161943357.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E5%8D%81%E4%B8%80%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221218102228146.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/ICT%E7%AC%AC%E5%8D%81%E4%B8%80%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221221163408378.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/ICT%E7%AC%AC%E5%8D%81%E4%B8%80%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221221163442106.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E5%8D%81%E4%B8%80%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221218104531404.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E5%8D%81%E4%B8%80%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221218112455614.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E5%8D%81%E4%B8%80%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221218112922389.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E5%8D%81%E4%B8%80%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221218114313207.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E5%8D%81%E4%B8%80%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221221182407285.png">
+<meta property="og:image" content="d:\Desktop\QQ%E5%9B%BE%E7%89%8720221221182943.jpg">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E5%8D%81%E4%B8%80%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221218152820898.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E5%8D%81%E4%B8%80%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221221222644291.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E5%8D%81%E4%B8%80%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221221223212599.png">
+<meta property="article:published_time" content="2023-01-26T04:52:27.000Z">
+<meta property="article:modified_time" content="2023-01-28T12:37:43.559Z">
+<meta property="article:author" content="懒懒当大厨">
+<meta property="article:tag" content="ICT 数通">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E5%8D%81%E4%B8%80%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221218100646448.png">
+  
+    <link rel="alternate" href="/atom.xml" title="总会有地上的生灵 敢于直面雷霆的威光" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">总会有地上的生灵 敢于直面雷霆的威光</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://lanyangyangy.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-ICT第十一次笔记" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/01/26/ICT%E7%AC%AC%E5%8D%81%E4%B8%80%E6%AC%A1%E7%AC%94%E8%AE%B0/" class="article-date">
+  <time class="dt-published" datetime="2023-01-26T04:52:27.000Z" itemprop="datePublished">2023-01-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      ICT第十一次笔记
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>IS-IS是OSI定协议栈中的CLNS的一部分。</p>
+<p>IS-IS在自治系统内采用骨干区域与非骨干区域两级的分层结构：</p>
+<ul>
+<li>Level-1路由器部署在非骨干区域。</li>
+<li>Level-2路由器和Level-1-1路由器部署在骨干区域。</li>
+<li>每一个非骨干区域都通过Level-1-2路由器与骨干网络相连。</li>
+</ul>
+<img src="/2023/01/26/ICT%E7%AC%AC%E5%8D%81%E4%B8%80%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221218100646448.png" class="" title="image-20221218100646448">
+
+<img src="/2023/01/26/ICT%E7%AC%AC%E5%8D%81%E4%B8%80%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221218100840759.png" class="" title="image-20221218100840759">
+
+<img src="/2023/01/26/ICT%E7%AC%AC%E5%8D%81%E4%B8%80%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221218104112044.png" class="" title="image-20221218104112044">
+
+<img src="/2023/01/26/ICT%E7%AC%AC%E5%8D%81%E4%B8%80%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221221160523513.png" class="" title="image-20221221160523513">
+
+<img src="/2023/01/26/ICT%E7%AC%AC%E5%8D%81%E4%B8%80%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221221161943357.png" class="" title="image-20221221161943357">
+
+<p>实验：<img src="/2023/01/26/ICT%E7%AC%AC%E5%8D%81%E4%B8%80%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221218102228146.png" class="" title="image-20221218102228146"></p>
+<p>R6:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[R6]<span class="built_in">int</span> g0/<span class="number">00</span>/<span class="number">0</span></span><br><span class="line">[R6-GigabitEthernet0/<span class="number">0</span>/<span class="number">0</span>]ip add <span class="number">67.1</span><span class="number">.1</span><span class="number">.6</span> <span class="number">24</span></span><br><span class="line">[R6-GigabitEthernet0/<span class="number">0</span>/<span class="number">0</span>]isis <span class="number">1</span></span><br><span class="line">[R6-isis-<span class="number">1</span>]<span class="keyword">is</span>-level level-<span class="number">1</span></span><br><span class="line">[R6-isis-<span class="number">1</span>]<span class="built_in">int</span> g0/<span class="number">00</span>/<span class="number">0</span></span><br><span class="line">[R6-GigabitEthernet0/<span class="number">0</span>/<span class="number">0</span>]isis enable <span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+<p>R7:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[R7]int g0/0/0</span><br><span class="line">[R7-GigabitEthernet0/0/0]ip add 67.1.1.7 24</span><br><span class="line">[R7-GigabitEthernet0/0/0]isis 1</span><br><span class="line">[R7-isis-1]is-level level-1</span><br><span class="line">[R7-isis-1]int g0/0/0</span><br><span class="line">[R7-GigabitEthernet0/0/0]isis enable 1</span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="/ICT%E7%AC%AC%E5%8D%81%E4%B8%80%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221221163408378.png" alt="image-20221221163408378"><img src="/ICT%E7%AC%AC%E5%8D%81%E4%B8%80%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221221163442106.png" alt="image-20221221163442106"></p>
+<p>修改IS-IS开销：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">isis cost xx</span><br></pre></td></tr></table></figure>
+
+
+
+<p>ISIS是直接封装在数据链路层的帧结构中。</p>
+<img src="/2023/01/26/ICT%E7%AC%AC%E5%8D%81%E4%B8%80%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221218104531404.png" class="" title="image-20221218104531404">
+
+<img src="/2023/01/26/ICT%E7%AC%AC%E5%8D%81%E4%B8%80%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221218112455614.png" class="" title="image-20221218112455614">
+
+<img src="/2023/01/26/ICT%E7%AC%AC%E5%8D%81%E4%B8%80%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221218112922389.png" class="" title="image-20221218112922389">
+
+<img src="/2023/01/26/ICT%E7%AC%AC%E5%8D%81%E4%B8%80%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221218114313207.png" class="" title="image-20221218114313207">
+
+<p>实验：</p>
+<img src="/2023/01/26/ICT%E7%AC%AC%E5%8D%81%E4%B8%80%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221221182407285.png" class="" title="image-20221221182407285">
+
+<p>AR1：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">[AR1(L1)]isis 1 </span><br><span class="line"></span><br><span class="line">[AR1(L1)-isis-1]is-level level-1  </span><br><span class="line"></span><br><span class="line">[AR1(L1)-isis-1]network-entity 49.0001.0000.0000.0001.00</span><br><span class="line">[AR1(L1)-isis-1]quit</span><br><span class="line"></span><br><span class="line">[AR1(L1)]inter g0/0/1</span><br><span class="line"></span><br><span class="line">[AR1(L1)-GigabitEthernet0/0/1]isis enable </span><br><span class="line">[AR1(L1)-GigabitEthernet0/0/1]inter g0/0/2</span><br><span class="line">[AR1(L1)-GigabitEthernet0/0/2]isis enable </span><br><span class="line"></span><br><span class="line">[AR1(L1)-GigabitEthernet0/0/2]inter lo 0 </span><br><span class="line">[AR1(L1)-LoopBack0]isis enable</span><br></pre></td></tr></table></figure>
+
+<p>AR2:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">[AR2(L1/2)]isis 1 </span><br><span class="line"></span><br><span class="line">[AR2(L1/2)-isis-1]network-entity 49.0001.0000.0000.0002.00</span><br><span class="line"></span><br><span class="line">[AR2(L1/2)-isis-1]is-level level-1-2</span><br><span class="line">[AR2(L1/2)-isis-1]quit</span><br><span class="line"></span><br><span class="line">[AR2(L1/2)]inter g0/0/0</span><br><span class="line"></span><br><span class="line">[AR2(L1/2)-GigabitEthernet0/0/0]isis enable </span><br><span class="line"></span><br><span class="line">[AR2(L1/2)-GigabitEthernet0/0/0]inter g0/0/1</span><br><span class="line">[AR2(L1/2)-GigabitEthernet0/0/1]isis enable </span><br><span class="line">[AR2(L1/2)-GigabitEthernet0/0/1]inte lo 0   </span><br><span class="line">[AR2(L1/2)-LoopBack0]isis enable</span><br></pre></td></tr></table></figure>
+
+<p>AR3:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[AR3(L1/2)]isis 1 </span><br><span class="line"></span><br><span class="line">[AR3(L1/2)-isis-1]network-entity 49.0001.0000.0000.0003.00</span><br><span class="line"></span><br><span class="line">[AR3(L1/2)-isis-1]is-level level-1-2 </span><br><span class="line">[AR3(L1/2)]interface g0/0/0</span><br><span class="line"></span><br><span class="line">[AR3(L1/2)-GigabitEthernet0/0/0]isis enable</span><br><span class="line">[AR3(L1/2)-GigabitEthernet0/0/1]inter  lo 0 </span><br><span class="line">[AR3(L1/2)-LoopBack0]isis enable</span><br><span class="line">[AR3(L1/2)-LoopBack0]interface g0/0/2</span><br><span class="line">[AR3(L1/2)-GigabitEthernet0/0/2]isis enable   </span><br></pre></td></tr></table></figure>
+
+<p>AR4:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">[AR4(L2)]isis 1 </span><br><span class="line"></span><br><span class="line">[AR4(L2)-isis-1]network-entity 49.0002.0000.0000.0004.00</span><br><span class="line"></span><br><span class="line">[AR4(L2)-isis-1]is-level level-2  </span><br><span class="line">[AR4(L2)-isis-1]quit</span><br><span class="line"></span><br><span class="line">[AR4(L2)]inter g0/0/0</span><br><span class="line">[AR4(L2)-GigabitEthernet0/0/0]isis enable  </span><br><span class="line">[AR4(L2)-GigabitEthernet0/0/0]inter g0/0/1</span><br><span class="line">[AR4(L2)-GigabitEthernet0/0/1]isis enable </span><br><span class="line">[AR4(L2)-GigabitEthernet0/0/1]inter lo 0 </span><br><span class="line">[AR4(L2)-LoopBack0]isis enable</span><br></pre></td></tr></table></figure>
+
+<p>AR5:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">[AR5(L2)]isis 1 </span><br><span class="line">[AR5(L2)-isis-1]network-entity 49.0002.0000.0000.0005.00</span><br><span class="line">[AR5(L2)-isis-1]is-level level-2</span><br><span class="line">[AR5(L2)-isis-1]quit</span><br><span class="line"></span><br><span class="line">[AR5(L2)]inter g0/0/0</span><br><span class="line">[AR5(L2)-GigabitEthernet0/0/0]isis enable</span><br><span class="line"></span><br><span class="line">[AR5(L2)-GigabitEthernet0/0/0]inter g0/0/1</span><br><span class="line">[AR5(L2)-GigabitEthernet0/0/1]isis enable</span><br><span class="line"></span><br><span class="line">[AR5(L2)]inter lo 0 </span><br><span class="line">[AR5(L2)-LoopBack0]isis enable </span><br></pre></td></tr></table></figure>
+
+<p>结果：在AR2上通过ISIS学到了路由</p>
+<p><img src="D:\Desktop\QQ图片20221221182943.jpg" alt="QQ图片20221221182943"></p>
+<p>路由渗透（解决次优路径）：</p>
+<p>AR2:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[AR2(L1/2)]ip ip-prefix 1 permit 4.4.4.4 32 </span><br><span class="line">[AR2(L1/2)]isis 1 </span><br><span class="line"></span><br><span class="line">[AR2(L1/2)-isis-1]import-route isis level-2 into level-1 filter-policy ip-prefix 1  </span><br></pre></td></tr></table></figure>
+
+<p>AR3:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[AR3(L1/2)]ip ip-prefix 1 permit 5.5.5.5 32</span><br><span class="line">[AR3(L1/2)]isis 1 </span><br><span class="line">[AR3(L1/2)-isis-1]import-route isis level-2 into level-1 filter-policy ip-prefix 1 </span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="vxlan"><a href="#vxlan" class="headerlink" title="vxlan"></a>vxlan</h4><p>VXLAN的特点是将L2的以太帧封装到UDP报文（即L2 over L4）中，并在L3网络中传输。</p>
+<p>VXLAN本质上是一种隧道技术，在源网络设备与目的网络设备之间的IP网络上，建立一条逻辑隧道，将用户侧报文经过特定的封装后通过这条隧道转发。从用户的角度来看，接入网络的服务器就像是连接到了一个虚拟的二层交换机的不同端口上（可把蓝色虚框表示的数据中心VXLAN网络看成一个二层虚拟交换机），可以方便地通信。</p>
+<h5 id="VTEP"><a href="#VTEP" class="headerlink" title="VTEP"></a>VTEP</h5><p>VTEP（VXLAN Tunnel Endpoints，VXLAN隧道端点）是VXLAN网络的边缘设备，是VXLAN隧道的起点和终点，VXLAN对用户原始数据帧的封装和解封装均在VTEP上进行。</p>
+<h5 id="VNI"><a href="#VNI" class="headerlink" title="VNI"></a>VNI</h5><p>VNI是一种类似于VLAN ID的用户标识，一个VNI代表了一个租户，属于不同VNI的虚拟机之间不能直接进行二层通信。</p>
+<p>在分布式网关部署场景下，VNI还可分为二层VNI和三层VNI，它们的作用不同：</p>
+<ul>
+<li>二层VNI是普通的VNI，以1：1方式映射到广播域BD，实现VXLAN报文同子网的转发。</li>
+<li>三层VNI和VPN实例进行关联，用于VXLAN报文跨子网的转发。</li>
+</ul>
+<img src="/2023/01/26/ICT%E7%AC%AC%E5%8D%81%E4%B8%80%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221218152820898.png" class="" title="image-20221218152820898">
+
+<p>实验:</p>
+<img src="/2023/01/26/ICT%E7%AC%AC%E5%8D%81%E4%B8%80%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221221222644291.png" class="" title="image-20221221222644291">
+
+<p>配置过程:</p>
+<p>1、搭好实验环境，导入号CE12800镜像。 </p>
+<p>2、基础配置。（修改设备名、直连接口IP地址、设备vlan，trunk划分。） 3、配置路由协议。（保证CE1、CE2、CE3 loopback能通） </p>
+<p>4、VXLAN相关配置。（建立VXLAN隧道、配置VNI号等） </p>
+<p>5、验证。</p>
+<p>基本配置:</p>
+<p>CE交换机要敲commit,且其端口默认shutdown.</p>
+<p>CE1:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&lt;HUAWEI&gt;sys</span><br><span class="line">[~HUAWEI]sys CE1</span><br><span class="line">[*HUAWEI]commit </span><br><span class="line">[~CE1]inter g1/<span class="number">0</span>/<span class="number">0</span></span><br><span class="line"></span><br><span class="line">[~CE1-GE1/<span class="number">0</span>/<span class="number">0</span>]undo portswitch </span><br><span class="line">[*CE1-GE1/<span class="number">0</span>/<span class="number">0</span>]ip add <span class="number">12.1</span><span class="number">.1</span><span class="number">.1</span> <span class="number">24</span></span><br><span class="line"></span><br><span class="line">[*CE1-GE1/<span class="number">0</span>/<span class="number">0</span>]undo shutdown </span><br><span class="line">[*CE1]inter lo <span class="number">0</span>            </span><br><span class="line">[*CE1-LoopBack0]ip add <span class="number">10.10</span><span class="number">.10</span><span class="number">.10</span> <span class="number">24</span> </span><br><span class="line">[*CE1-LoopBack0]quit</span><br><span class="line">[*CE1]commit </span><br><span class="line"></span><br><span class="line">//路由配置</span><br><span class="line">[~CE1]ospf <span class="number">1</span></span><br><span class="line">[*CE1-ospf-<span class="number">1</span>]area <span class="number">0</span> </span><br><span class="line">[*CE1-ospf-<span class="number">1</span>-area-<span class="number">0.0</span><span class="number">.0</span><span class="number">.0</span>]network <span class="number">12.1</span><span class="number">.1</span><span class="number">.0</span> <span class="number">0.0</span><span class="number">.0</span><span class="number">.255</span></span><br><span class="line">[*CE1-ospf-<span class="number">1</span>-area-<span class="number">0.0</span><span class="number">.0</span><span class="number">.0</span>]network <span class="number">10.10</span><span class="number">.10</span><span class="number">.10</span> <span class="number">0.0</span><span class="number">.0</span><span class="number">.0</span>  </span><br><span class="line">[*CE1-ospf-<span class="number">1</span>-area-<span class="number">0.0</span><span class="number">.0</span><span class="number">.0</span>]quit</span><br><span class="line">[*CE1-ospf-<span class="number">1</span>]quit</span><br><span class="line">[*CE1]commit</span><br></pre></td></tr></table></figure>
+
+<p>CE2:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">&lt;HUAWEI&gt;sys</span><br><span class="line">[~HUAWEI]sysname CE2</span><br><span class="line"></span><br><span class="line">[*HUAWEI]commit </span><br><span class="line">[~CE2]inter g1/0/0</span><br><span class="line">[~CE2-GE1/0/0]undo portswitch </span><br><span class="line">[*CE2-GE1/0/0]ip add 12.1.1.2 24</span><br><span class="line">[*CE2-GE1/0/0]undo shutdown</span><br><span class="line">[*CE2-GE1/0/0]quit</span><br><span class="line">[*CE2]inter lo 0 </span><br><span class="line">[*CE2-LoopBack0]ip add 20.20.20.20 24</span><br><span class="line">[*CE2-LoopBack0]quit</span><br><span class="line">[*CE2]inter g1/0/1</span><br><span class="line">[*CE2-GE1/0/1]undo portswitch</span><br><span class="line">[*CE2-GE1/0/1]ip add 23.1.1.2 24</span><br><span class="line">[*CE2-GE1/0/1]undo shutdown</span><br><span class="line">[*CE2-GE1/0/1]quit</span><br><span class="line">[*CE2]commit</span><br><span class="line">//路由配置</span><br><span class="line">[~CE2]ospf 1 </span><br><span class="line">[*CE2-ospf-1]area 0 </span><br><span class="line"></span><br><span class="line">[*CE2-ospf-1-area-0.0.0.0]network 12.1.1.0 0.0.0.255</span><br><span class="line">[*CE2-ospf-1-area-0.0.0.0]network 23.1.1.0 0.0.0.255</span><br><span class="line">[*CE2-ospf-1-area-0.0.0.0]network 20.20.20.20 0.0.0.0</span><br><span class="line">[*CE2-ospf-1-area-0.0.0.0]quit</span><br><span class="line">[*CE2-ospf-1]quit</span><br><span class="line">[*CE2]commit</span><br></pre></td></tr></table></figure>
+
+<p>CE3:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&lt;HUAWEI&gt;sys</span><br><span class="line">[~HUAWEI]sysname CE3</span><br><span class="line"></span><br><span class="line">[*HUAWEI]commit </span><br><span class="line">[~CE3]inter g1/0/0</span><br><span class="line">[~CE3-GE1/0/0]undo portswitch</span><br><span class="line">[*CE3-GE1/0/0]ip add 23.1.1.3 24</span><br><span class="line">[*CE3-GE1/0/0]undo shutdown</span><br><span class="line">[*CE3-GE1/0/0]quit</span><br><span class="line">[*CE3]inter lo 0 </span><br><span class="line">[*CE3-LoopBack0]ip add 30.30.30.30 24</span><br><span class="line">[*CE3-LoopBack0]quit</span><br><span class="line">[*CE3]commit</span><br><span class="line">//路由配置</span><br><span class="line">[~CE3]ospf  1</span><br><span class="line">[*CE3-ospf-1]area 0 </span><br><span class="line"></span><br><span class="line">[*CE3-ospf-1-area-0.0.0.0]network 23.1.1.0 0.0.0.255</span><br><span class="line">[*CE3-ospf-1-area-0.0.0.0]network 30.30.30.30 0.0.0.0</span><br><span class="line">[*CE3-ospf-1-area-0.0.0.0]quit</span><br><span class="line">[*CE3-ospf-1]quit</span><br><span class="line"></span><br><span class="line">[*CE3]commit </span><br></pre></td></tr></table></figure>
+
+<p>LSW2:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[LSW2]inter g0/0/1</span><br><span class="line"></span><br><span class="line">[LSW2-GigabitEthernet0/0/1]port link-type trunk </span><br><span class="line">[LSW2-GigabitEthernet0/0/1]port trunk allow-pass vlan all</span><br><span class="line">[LSW2]vlan 10 </span><br><span class="line">[LSW2-vlan10]quit</span><br><span class="line">[LSW2]inter g0/0/2</span><br><span class="line">[LSW2-GigabitEthernet0/0/2]port default vlan 10 </span><br></pre></td></tr></table></figure>
+
+<p>LSW3:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[LSW3]interface g0/0/1</span><br><span class="line">[LSW3-GigabitEthernet0/0/1]port link-type trunk</span><br><span class="line">[LSW3-GigabitEthernet0/0/1]port trunk allow-pass vlan all </span><br><span class="line">[LSW3-GigabitEthernet0/0/1]quit  </span><br><span class="line">[LSW3]vlan 10 </span><br><span class="line">[LSW3-vlan10]quit</span><br><span class="line">[LSW3]inter g0/0/2</span><br><span class="line">[LSW3-GigabitEthernet0/0/2]port link-type access </span><br><span class="line">[LSW3-GigabitEthernet0/0/2]port default vlan 10</span><br></pre></td></tr></table></figure>
+
+<p>VXLAN配置:<br>CE1:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">[~CE1]vlan 10 </span><br><span class="line">[*CE1-vlan10]quit</span><br><span class="line">[*CE1]bridge-domain 10</span><br><span class="line">[*CE1-bd10]quit</span><br><span class="line">[*CE1]interface g1/0/1.1 mode l2</span><br><span class="line">[*CE1-GE1/0/1.1]encapsulation dot1q vid 10 </span><br><span class="line">[*CE1-GE1/0/1.1]bridge-domain 10 </span><br><span class="line">[*CE1-GE1/0/1.1]quit</span><br><span class="line">[~CE1]inter g1/0/1</span><br><span class="line"></span><br><span class="line">[~CE1-GE1/0/1]undo shutdown </span><br><span class="line">[*CE1-GE1/0/1]quit</span><br><span class="line">[*CE1]commit </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>CE2:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">[~CE3]vlan 10</span><br><span class="line">[*CE3-vlan10]quit</span><br><span class="line">[*CE3]bridge-domain 10 </span><br><span class="line">[*CE3-bd10]quit</span><br><span class="line"></span><br><span class="line">[*CE3]int g1/0/1.1 mode l2   </span><br><span class="line">[*CE3-GE1/0/1.1]encapsulation dot1q vid 10</span><br><span class="line">[*CE3-GE1/0/1.1]bridge-domain 10</span><br><span class="line">[*CE3-GE1/0/1.1]quit</span><br><span class="line">[~CE3]inter g1/0/1</span><br><span class="line"></span><br><span class="line">[~CE3-GE1/0/1]undo shutdown </span><br><span class="line">[*CE3-GE1/0/1]quit</span><br><span class="line">[*CE3]commit</span><br></pre></td></tr></table></figure>
+
+<p>配置VXLAN隧道:</p>
+<p>CE1:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">VNI与BD配置</span><br><span class="line">[~CE1]bridge-domain 10   #系统视图下创建广播域BD，进入BD视图。ID取值范围为1～16777215。</span><br><span class="line"></span><br><span class="line">[~CE1-bd10]vxlan vni 1   #BD视图下创建VXLAN网络标识VNI并关联广播域BD。ID取值范围为1～16777215。</span><br><span class="line">Info: Please disable dynamic ARP learning when the controller is used to deliver ARP entries.</span><br><span class="line">[*CE1-bd10]quit</span><br><span class="line"></span><br><span class="line">VTEP配置</span><br><span class="line">[*CE1]interface Nve 1    #创建NVE接口，并进入NVE接口视图。一般情况下NVE接口编号有且仅为1。</span><br><span class="line">[*CE1-Nve1]source 10.10.10.10    #配置源端VTEP的IP地址。推荐使用Loopback接口的地址。</span><br><span class="line">[*CE1-Nve1]vni 1 head-end peer-list 30.30.30.30    #NVE视图下配置VNI指定多个远端VTEP的IP地址建立头端复制列表。本端NVE将根据此列表复制并转发报文。</span><br><span class="line">[*CE1-Nve1]quit</span><br><span class="line"></span><br><span class="line">[*CE1]commit </span><br></pre></td></tr></table></figure>
+
+<p>CE3:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">VNI与BD配置</span><br><span class="line">[~CE3]bridge-domain 10</span><br><span class="line">[~CE3-bd10]vxlan vni 1</span><br><span class="line">Info: Please disable dynamic ARP learning when the controller is used to deliver ARP entries.</span><br><span class="line">[*CE3-bd10]quit</span><br><span class="line"></span><br><span class="line">VTEP配置</span><br><span class="line">[*CE3]interface nve 1</span><br><span class="line">[*CE3-Nve1]source 30.30.30.30</span><br><span class="line"></span><br><span class="line">[*CE3-Nve1]vni 1 head-end peer-list 10.10.10.10</span><br><span class="line">[*CE3-Nve1]quit</span><br><span class="line"></span><br><span class="line">[*CE3]commit </span><br><span class="line">[~CE3]</span><br></pre></td></tr></table></figure>
+
+<p>验证:</p>
+<img src="/2023/01/26/ICT%E7%AC%AC%E5%8D%81%E4%B8%80%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221221223212599.png" class="" title="image-20221221223212599">
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E5%8D%81%E4%B8%80%E6%AC%A1%E7%AC%94%E8%AE%B0/" data-id="cldfxvtai000fvg9ufqxe0lz5" data-title="ICT第十一次笔记" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ICT-%E6%95%B0%E9%80%9A/" rel="tag">ICT 数通</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2023/01/26/ICT%E7%AC%AC%E5%8D%81%E6%AC%A1%E7%AC%94%E8%AE%B0/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">ICT第十次笔记</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ICT-%E6%95%B0%E9%80%9A/" rel="tag">ICT 数通</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/numpy/" rel="tag">numpy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" rel="tag">python 面向对象</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/ICT-%E6%95%B0%E9%80%9A/" style="font-size: 20px;">ICT 数通</a> <a href="/tags/numpy/" style="font-size: 10px;">numpy</a> <a href="/tags/python-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" style="font-size: 10px;">python 面向对象</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/01/">January 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/12/">December 2022</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/01/26/ICT%E7%AC%AC%E5%8D%81%E4%B8%80%E6%AC%A1%E7%AC%94%E8%AE%B0/">ICT第十一次笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2023/01/26/ICT%E7%AC%AC%E5%8D%81%E6%AC%A1%E7%AC%94%E8%AE%B0/">ICT第十次笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2023/01/26/ICT%E7%AC%AC%E4%B9%9D%E6%AC%A1%E7%AC%94%E8%AE%B0/">ICT第九次笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2023/01/26/ICT%E7%AC%AC%E5%85%AB%E6%AC%A1%E7%AC%94%E8%AE%B0/">ICT第八次笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2023/01/26/ICT%E7%AC%AC%E4%B8%83%E6%AC%A1%E7%AC%94%E8%AE%B0/">ICT第七次笔记</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 懒懒当大厨<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

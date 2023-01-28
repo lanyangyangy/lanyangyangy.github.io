@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>ICT第五次笔记 | 总会有地上的生灵 敢于直面雷霆的威光</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="自治系统由同一技术管理机构管理、使用同一选路策略的一些路由器的集合。 自治系统内部的路由协议–IGP 自治系统之间的路由协议–EGP   BGP原理：BGP自治系统间的路由协议 BGP外部路由协议，是一种增强的距离矢量路由协议。 可以根据链路状态数据库画出整个网络拓扑图。 BGP边界网关协议，用于AS与AS之间的路由协议   BGP：支持CIDR传输协议：TCP，端口号：179无需周期性更新可靠的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ICT第五次笔记">
+<meta property="og:url" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E4%BA%94%E6%AC%A1%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:site_name" content="总会有地上的生灵 敢于直面雷霆的威光">
+<meta property="og:description" content="自治系统由同一技术管理机构管理、使用同一选路策略的一些路由器的集合。 自治系统内部的路由协议–IGP 自治系统之间的路由协议–EGP   BGP原理：BGP自治系统间的路由协议 BGP外部路由协议，是一种增强的距离矢量路由协议。 可以根据链路状态数据库画出整个网络拓扑图。 BGP边界网关协议，用于AS与AS之间的路由协议   BGP：支持CIDR传输协议：TCP，端口号：179无需周期性更新可靠的">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E4%BA%94%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221108154330732.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E4%BA%94%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221108154941466.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E4%BA%94%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221108174353222.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E4%BA%94%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221108174740129.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E4%BA%94%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221108174242748.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E4%BA%94%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221105120128996.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E4%BA%94%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221108205632379.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E4%BA%94%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221108214557870.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E4%BA%94%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221108210606875.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E4%BA%94%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221108215458365.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E4%BA%94%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221108221010811.png">
+<meta property="article:published_time" content="2023-01-26T04:44:26.000Z">
+<meta property="article:modified_time" content="2023-01-28T12:37:10.950Z">
+<meta property="article:author" content="懒懒当大厨">
+<meta property="article:tag" content="ICT 数通">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E4%BA%94%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221108154330732.png">
+  
+    <link rel="alternate" href="/atom.xml" title="总会有地上的生灵 敢于直面雷霆的威光" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">总会有地上的生灵 敢于直面雷霆的威光</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://lanyangyangy.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-ICT第五次笔记" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/01/26/ICT%E7%AC%AC%E4%BA%94%E6%AC%A1%E7%AC%94%E8%AE%B0/" class="article-date">
+  <time class="dt-published" datetime="2023-01-26T04:44:26.000Z" itemprop="datePublished">2023-01-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      ICT第五次笔记
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h4 id="自治系统"><a href="#自治系统" class="headerlink" title="自治系统"></a>自治系统</h4><p>由同一技术管理机构管理、使用同一选路策略的一些路由器的集合。</p>
+<p>自治系统内部的路由协议–IGP</p>
+<p>自治系统之间的路由协议–EGP</p>
+<img src="/2023/01/26/ICT%E7%AC%AC%E4%BA%94%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221108154330732.png" class="" title="image-20221108154330732">
+
+<h4 id="BGP"><a href="#BGP" class="headerlink" title="BGP"></a>BGP</h4><p><strong>原理</strong>：BGP自治系统间的路由协议</p>
+<p>BGP外部路由协议，是一种增强的<strong>距离矢量路由协议</strong>。</p>
+<p>可以根据链路状态数据库画出整个网络拓扑图。</p>
+<p>BGP边界网关协议，用于AS与AS之间的路由协议</p>
+<img src="/2023/01/26/ICT%E7%AC%AC%E4%BA%94%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221108154941466.png" class="" title="image-20221108154941466">
+
+<p>BGP：支持CIDR<br>传输协议：<strong>TCP</strong>，端口号：<strong>179</strong><br>无需周期性更新<br>可靠的路由更新：只发送增量路由<br>周期性发送keepAlive报文检测TCP连通性</p>
+<h5 id="BGP报文-5种"><a href="#BGP报文-5种" class="headerlink" title="BGP报文(5种)"></a>BGP报文(5种)</h5><ul>
+<li>Open包：负责和对等体peer建立邻居关系。(<strong>建立</strong>)</li>
+<li>KeepAlive：该消息在对等体之间周期性地发送，用以维护连接。(<strong>维护</strong>)</li>
+<li>Update：该消息被用来在BGP对等体之间传递路由信息。(<strong>更新</strong>)</li>
+<li>Notification：当 BGP Speaker检测到错误的时候，就发送该消息给对等体。(<strong>纠错</strong>)</li>
+<li>Route-refresh：用来通知对等体自己支持路由刷新能力。</li>
+<li><img src="/2023/01/26/ICT%E7%AC%AC%E4%BA%94%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221108174353222.png" class="" title="image-20221108174353222"></li>
+</ul>
+<h5 id="BGP路由传递"><a href="#BGP路由传递" class="headerlink" title="BGP路由传递"></a>BGP路由传递</h5><p>EBGP水平分割：经过那个AS，反过来不能再进入该AS<br>IBGP水平分割：通过IBGP学习到的路由条目反过来不能发给IBGP</p>
+<p>AS号<br>公有AS：1 ~ 64511<br>私有AS：64512 ~ 65535</p>
+<h5 id="BGP两种邻居关系"><a href="#BGP两种邻居关系" class="headerlink" title="BGP两种邻居关系"></a>BGP两种邻居关系</h5><p>IBGP、EBGP<br>当BGP被用在一个AS内部：IBGP<br>当BGP被用在AS之间：EBGP</p>
+<p>BGP只能使用一个进程号</p>
+<p>bash</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># todo AR1：展示BGP只能使用一个进程号</span></span><br><span class="line">[R1]bgp 1</span><br><span class="line">[R1-bgp]bgp 2</span><br><span class="line">Error: BGP is already running. The AS is 1.</span><br></pre></td></tr></table></figure>
+
+<p>注：<br>1.BGP宣告路由信息必须和路由表一致<br>2.BGP建立邻居关系建议直接使用物理接口<br>3.BGP建立邻居关系：<code>peer [对方IP] as-number [AS号]</code><br>4.BGP邻居关系建立30s-60s</p>
+<img src="/2023/01/26/ICT%E7%AC%AC%E4%BA%94%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221108174740129.png" class="" title="image-20221108174740129">
+
+<h4 id="BGP配置"><a href="#BGP配置" class="headerlink" title="BGP配置"></a>BGP配置</h4><img src="/2023/01/26/ICT%E7%AC%AC%E4%BA%94%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221108174242748.png" class="" title="image-20221108174242748">
+
+<p>AR1—–AR2</p>
+<p>AR1</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">bgp 1</span><br><span class="line">peer 12.1.1.2 as-number 16  //配邻居</span><br><span class="line">network 1.1.1.1 32   //宣告自己的路由条目</span><br><span class="line">dis bgp peer //查看自己的邻居信息</span><br></pre></td></tr></table></figure>
+
+<p>AR2</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">bgp 16</span><br><span class="line">peer 12.1.1.1 as-number 1 </span><br></pre></td></tr></table></figure>
+
+<p>AR2—–AR4(使用环回口进行建立BGP邻居关系)  </p>
+<p>AR2</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">bgp 16</span><br><span class="line">peer 4.4.4.4 as-number 16 </span><br><span class="line">peer 4.4.4.4 connect-interface LoopBack 0 </span><br></pre></td></tr></table></figure>
+
+<p>AR4</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">bgp 16</span><br><span class="line">peer 2.2.2.2 as-number 16 </span><br><span class="line">peer 2.2.2.2 connect-interface LoopBack 0</span><br></pre></td></tr></table></figure>
+
+<p>AR4—–AR1</p>
+<p>AR2</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">peer 4.4.4.4 next-hop-local   //告知把AR2当作下一跳   解决下一跳不可达</span><br></pre></td></tr></table></figure>
+
+
+
+<p>AR4</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[R4]ip route-static 66.66.66.66 32 64.1.1.6</span><br><span class="line">[R4]ping -a 4.4.4.4 66.66.66.66     //指定4.4.4.4ping66.66.66.66</span><br><span class="line">[R4]bgp 16</span><br><span class="line">[R4-bgp]peer 66.66.66.66 as-number 6</span><br><span class="line">[R4-bgp]peer 66.66.66.66 connect-interface LoopBack 0	</span><br><span class="line">[R4-bgp]peer 66.66.66.66 ebgp-max-hop  100    //修改EBGP的生存时间</span><br></pre></td></tr></table></figure>
+
+<p>AR6</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[R6]int lo 1</span><br><span class="line">[R6-LoopBack1]ip add 66.66.66.66 32</span><br><span class="line">[R6]ip route-static 0.0.0.0 0.0.0.0 64.1.1.4</span><br><span class="line">[R6]bgp 6</span><br><span class="line">[R6-bgp]peer 4.4.4.4 as-number 16</span><br><span class="line">[R6-bgp]peer 4.4.4.4 connect-interface LoopBack 1</span><br><span class="line">[R6-bgp]peer 4.4.4.4 ebgp-max-hop  100 //修改EBGP的生存时间</span><br></pre></td></tr></table></figure>
+
+<p>IBGP  timelive最大 255	</p>
+<p>EBGP多跳  timelive 1</p>
+<p>AR6—–AR1</p>
+<p>AR6</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[R6]ip route-static 4.4.4.4 32 64.1.1.4</span><br><span class="line">[R6]bgp 6</span><br><span class="line">[R6-bgp]network 6.6.6.6 32</span><br></pre></td></tr></table></figure>
+
+<p>AR4</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">[R4-bgp]peer 2.2.2.2 next-hop-local</span><br><span class="line">[R4]mpls lsr-id 4.4.4.4</span><br><span class="line">[R4]mpls</span><br><span class="line">[R4-mpls]quit</span><br><span class="line">[R4]mpls  ldp</span><br><span class="line">[R4-mpls-ldp]quit</span><br><span class="line">[R4]int g0/0/0</span><br><span class="line">[R4-GigabitEthernet0/0/0]mpls</span><br><span class="line">[R4-GigabitEthernet0/0/0]mpls ldp</span><br><span class="line">[R4-GigabitEthernet0/0/0]int g0/0/1</span><br><span class="line">[R4-GigabitEthernet0/0/1]mpls</span><br><span class="line">[R4-GigabitEthernet0/0/1]mpls ldp</span><br><span class="line"></span><br><span class="line">[R4]route recursive-lookup  tunnel </span><br></pre></td></tr></table></figure>
+
+<p>AR2</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[R2]mpls lsr-id 2.2.2.2</span><br><span class="line">[R2]mpls</span><br><span class="line">[R2-mpls]quit</span><br><span class="line">[R2]mpls  ldp </span><br><span class="line">[R2-mpls-ldp]quit</span><br><span class="line">[R2-GigabitEthernet0/0/1]mpls</span><br><span class="line">[R2-GigabitEthernet0/0/1]mpls ldp</span><br><span class="line">[R2]route recursive-lookup  tunnel </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<p>AR3</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[R3]mpls lsr-id 3.3.3.3</span><br><span class="line">[R3]mpls</span><br><span class="line">[R3-mpls]quit</span><br><span class="line">[R3]mpls  ldp</span><br><span class="line">[R3-mpls-ldp]quit</span><br><span class="line">[R3]int g0/0/0</span><br><span class="line">[R3-GigabitEthernet0/0/0]mpls</span><br><span class="line">[R3-GigabitEthernet0/0/0]mpls ldp</span><br><span class="line">[R3-GigabitEthernet0/0/0]int g0/0/1</span><br><span class="line">[R3-GigabitEthernet0/0/1]mpls</span><br><span class="line">[R3-GigabitEthernet0/0/1]mpls ldp</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<img src="/2023/01/26/ICT%E7%AC%AC%E4%BA%94%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221105120128996.png" class="">
+
+
+
+
+
+<h4 id="BGP路径选择过程"><a href="#BGP路径选择过程" class="headerlink" title="BGP路径选择过程"></a>BGP路径选择过程</h4><img src="/2023/01/26/ICT%E7%AC%AC%E4%BA%94%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221108205632379.png" class="" title="image-20221108205632379">
+
+<img src="/2023/01/26/ICT%E7%AC%AC%E4%BA%94%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221108214557870.png" class="" title="image-20221108214557870">
+
+
+
+<h5 id="实验："><a href="#实验：" class="headerlink" title="实验："></a>实验：</h5><img src="/2023/01/26/ICT%E7%AC%AC%E4%BA%94%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221108210606875.png" class="" title="image-20221108210606875">
+
+<h6 id="Preferred-Value（本地有效）"><a href="#Preferred-Value（本地有效）" class="headerlink" title="Preferred-Value（本地有效）"></a><strong>Preferred-Value</strong>（本地有效）</h6><p>使得R2选择R6作为下一跳路由器</p>
+<p>R2:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[Huawei-bgp]peer 26.1.1.6 preferred-value 100 //修改preferred-Value</span><br><span class="line">    Network            NextHop        MED        LocPrf    PrefVal Path/Ogn</span><br><span class="line"></span><br><span class="line"> *&gt;   4.4.4.4/32       26.1.1.6                              100    24i   </span><br></pre></td></tr></table></figure>
+
+<p>R2</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[Huawei]ip ip-prefix 4  permit 4.4.4.4 32   //设置前缀列表4，匹配路由条目4.4.4.4/32</span><br><span class="line">[Huawei]route-policy PVL permit node 10   // 配置策略路由命名为PVL允许策略内路由通过并设置序列号为10</span><br><span class="line">Info: New Sequence of this List.</span><br><span class="line">[Huawei-route-policy]if-match ip-prefix 4    //匹配前缀列表4</span><br><span class="line">[Huawei-route-policy]apply preferred-value 100  //修改preferred-value的值为100</span><br><span class="line">[Huawei-route-policy]bgp 1</span><br><span class="line">[Huawei-bgp]peer 26.1.1.6 route-policy PVL import  //指定邻居26.1.1.6学习到的路由匹配路由策略PVL</span><br><span class="line">[Huawei-bgp]</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><strong>Local-Preference</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1、仅在AS内部传递</span><br><span class="line">2、越大越优</span><br><span class="line">3、在AS内的IN或OUT,AS之间仅IN方向</span><br></pre></td></tr></table></figure>
+
+<p>R2</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">ip ip-prefix 4  permit 4.4.4.4 32   # 设置前缀列表4，匹配路由条目4.4.4.4/32</span><br><span class="line"></span><br><span class="line">route-policy LP permit node 10 </span><br><span class="line"> if-match ip-prefix 4 </span><br><span class="line"> apply local-preference 101 </span><br><span class="line"></span><br><span class="line">[Huawei]bgp 1 </span><br><span class="line">[Huawei-bgp]peer 26.1.1.6 route-policy LP import</span><br></pre></td></tr></table></figure>
+
+<h6 id="AS-PATH"><a href="#AS-PATH" class="headerlink" title="AS-PATH"></a>AS-PATH</h6><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1、仅在AS之间</span><br><span class="line">2、越短越优先</span><br><span class="line">3、在AS之间的IN和OUT方向</span><br></pre></td></tr></table></figure>
+
+<p>R2</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">ip ip-prefix 4  permit 4.4.4.4 32    设置前缀列表4，匹配路由条目4.4.4.4/32</span><br><span class="line"></span><br><span class="line">route-policy AS permit node 10 </span><br><span class="line"> if-match ip-prefix 4 </span><br><span class="line"> apply as-path 24 24 24 additive</span><br><span class="line"> </span><br><span class="line">                                           </span><br><span class="line">[Huawei]bgp 1 </span><br><span class="line"></span><br><span class="line">[Huawei-bgp]peer 23.1.1.3 route-policy AS import </span><br></pre></td></tr></table></figure>
+
+<h6 id="Origin属性"><a href="#Origin属性" class="headerlink" title="Origin属性"></a><strong>Origin属性</strong></h6><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1、所有路由器</span><br><span class="line">2、i&gt;e&gt;?</span><br><span class="line">3、在AS内部或外部的IN或OUT</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">ip ip-prefix 4  permit 4.4.4.4 32    设置前缀列表4，匹配路由条目4.4.4.4/32</span><br><span class="line"></span><br><span class="line">route-policy OR permit node 10 </span><br><span class="line"> if-match ip-prefix 4 </span><br><span class="line"> apply origin incomplete   </span><br><span class="line"> </span><br><span class="line"> bgp 1</span><br><span class="line"></span><br><span class="line"> peer 23.1.1.3 route-policy OR import </span><br></pre></td></tr></table></figure>
+
+<p>RR反射器防环：解决BGP水平分割问题(IBGP和EBGP的水平分割)<br>IBGP水平分割：通过IBGP学习的条目不能再发送给其他IBGP<br>EBGP水平分割：从某个接口上学习来的路由信息将不再从该接口上通告出去。就是从那个口进来的不再从这个口出去。</p>
+<h4 id="BGP路由反射器与联盟"><a href="#BGP路由反射器与联盟" class="headerlink" title="BGP路由反射器与联盟"></a>BGP路由反射器与联盟</h4><h5 id="反射器"><a href="#反射器" class="headerlink" title="反射器"></a>反射器</h5><p>路由发射器RR：<br>1.当RR从客户机收到一个路由更新时，会将它发送给客户机和非客户机。<br>2.当RR从非客户机收到一个路由更新时，只发送给客户机路由器，而不发送给其他非客户机路由器<br>3.当RR从EBGP收到一个路由更新时，会将它发送给客户机和非客户机。</p>
+<p>实验：</p>
+<img src="/2023/01/26/ICT%E7%AC%AC%E4%BA%94%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221108215458365.png" class="" title="image-20221108215458365">
+
+<ol>
+<li></li>
+</ol>
+<p>R4学到1.1.1.1</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[R3]bgp 2     </span><br><span class="line">[R3-bgp]peer 23.1.1.2 reflect-client </span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[R4]dis bgp rou</span><br><span class="line"> BGP Local router ID is 34.1.1.4 </span><br><span class="line"> Status codes: * - valid, &gt; - best, d - damped,</span><br><span class="line">               h - history,  i - internal, s - suppressed, S - Stale</span><br><span class="line">               Origin : i - IGP, e - EGP, ? - incomplete</span><br><span class="line"> Total Number of Routes: 1</span><br><span class="line">      Network            NextHop        MED        LocPrf    PrefVal Path/Ogn</span><br><span class="line"> *&gt;i  1.1.1.1/32         12.1.1.1        0          100        0      1i</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li></li>
+</ol>
+<p>R5学到1.1.1.1</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[R4]bgp 2</span><br><span class="line">[R4-bgp]peer 45.1.1.5 reflect-client  # 设置为RR，45.1.1.5为client</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">[R5]dis bgp routing-table</span><br><span class="line"></span><br><span class="line"> BGP Local router ID is 45.1.1.5 </span><br><span class="line"> Status codes: * - valid, &gt; - best, d - damped,</span><br><span class="line">               h - history,  i - internal, s - suppressed, S - Stale</span><br><span class="line">               Origin : i - IGP, e - EGP, ? - incomplete</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"> Total Number of Routes: 1</span><br><span class="line">      Network            NextHop        MED        LocPrf    PrefVal Path/Ogn</span><br><span class="line"></span><br><span class="line"> *&gt;i  1.1.1.1/32         12.1.1.1        0          100        0      1i</span><br><span class="line">[R5]</span><br></pre></td></tr></table></figure>
+
+<h5 id="建立联邦"><a href="#建立联邦" class="headerlink" title="建立联邦"></a>建立联邦</h5><p>大AS中建立小AS，AS外部建立邻居关系通过大AS。</p>
+<img src="/2023/01/26/ICT%E7%AC%AC%E4%BA%94%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221108221010811.png" class="" title="image-20221108221010811">
+
+<p>R2</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">bgp 64512             //配置小bgp</span><br><span class="line">confederation id 2    //声明大bgp</span><br><span class="line">peer 12.1.1.1 as-number 1   //添加邻居</span><br><span class="line"> peer 23.1.1.3 as-number 64512  </span><br></pre></td></tr></table></figure>
+
+<p>R3</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">bgp 64512</span><br><span class="line"> confederation id 2</span><br><span class="line"> confederation peer-as 64513      //同大AS下添加为小AS</span><br><span class="line"> peer 23.1.1.2 as-number 64512 </span><br><span class="line"> peer 34.1.1.4 as-number 64513 </span><br></pre></td></tr></table></figure>
+
+<p>R4</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">bgp 64513</span><br><span class="line"> confederation id 2</span><br><span class="line"> confederation peer-as 64512       //同大AS下添加为小AS</span><br><span class="line"> peer 34.1.1.3 as-number 64512 </span><br><span class="line"> peer 45.1.1.5 as-number 64513 </span><br></pre></td></tr></table></figure>
+
+<p>R5</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">bgp 64513</span><br><span class="line">confederation id 2</span><br><span class="line">peer 45.1.1.4 as-number 64513 </span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E4%BA%94%E6%AC%A1%E7%AC%94%E8%AE%B0/" data-id="cldfxvtad0008vg9udkchc1ni" data-title="ICT第五次笔记" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ICT-%E6%95%B0%E9%80%9A/" rel="tag">ICT 数通</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/01/26/ICT%E7%AC%AC%E5%85%AD%E6%AC%A1%E7%AC%94%E8%AE%B0/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          ICT第六次笔记
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2023/01/26/ICT%E7%AC%AC%E5%9B%9B%E6%AC%A1%E7%AC%94%E8%AE%B0/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">ICT第四次笔记</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ICT-%E6%95%B0%E9%80%9A/" rel="tag">ICT 数通</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/numpy/" rel="tag">numpy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" rel="tag">python 面向对象</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/ICT-%E6%95%B0%E9%80%9A/" style="font-size: 20px;">ICT 数通</a> <a href="/tags/numpy/" style="font-size: 10px;">numpy</a> <a href="/tags/python-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" style="font-size: 10px;">python 面向对象</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/01/">January 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/12/">December 2022</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/01/26/ICT%E7%AC%AC%E5%8D%81%E4%B8%80%E6%AC%A1%E7%AC%94%E8%AE%B0/">ICT第十一次笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2023/01/26/ICT%E7%AC%AC%E5%8D%81%E6%AC%A1%E7%AC%94%E8%AE%B0/">ICT第十次笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2023/01/26/ICT%E7%AC%AC%E4%B9%9D%E6%AC%A1%E7%AC%94%E8%AE%B0/">ICT第九次笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2023/01/26/ICT%E7%AC%AC%E5%85%AB%E6%AC%A1%E7%AC%94%E8%AE%B0/">ICT第八次笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2023/01/26/ICT%E7%AC%AC%E4%B8%83%E6%AC%A1%E7%AC%94%E8%AE%B0/">ICT第七次笔记</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 懒懒当大厨<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

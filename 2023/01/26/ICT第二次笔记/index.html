@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>ICT第二次笔记 | 总会有地上的生灵 敢于直面雷霆的威光</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="第二次笔记DHCP:DHCP特点：即插即用 	统一管理 	使用效率高    可跨网段实现 DHCP地址分配：手工分配 	自动分配	动态分配 操作：一、基于端口DHCP 1.使能DHCP服务 1[Huawei]dhcp enable   2.配置路由器端口的ip地址 12[Huawei]int g0&#x2F;0&#x2F;0[Huawei-GigabitEthernet0&#x2F;0&#x2F;0]ip add 10.1.1.1 24">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ICT第二次笔记">
+<meta property="og:url" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E4%BA%8C%E6%AC%A1%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:site_name" content="总会有地上的生灵 敢于直面雷霆的威光">
+<meta property="og:description" content="第二次笔记DHCP:DHCP特点：即插即用 	统一管理 	使用效率高    可跨网段实现 DHCP地址分配：手工分配 	自动分配	动态分配 操作：一、基于端口DHCP 1.使能DHCP服务 1[Huawei]dhcp enable   2.配置路由器端口的ip地址 12[Huawei]int g0&#x2F;0&#x2F;0[Huawei-GigabitEthernet0&#x2F;0&#x2F;0]ip add 10.1.1.1 24">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E4%BA%8C%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221015224338853.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E4%BA%8C%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221015202829829.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E4%BA%8C%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221016110740335.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E4%BA%8C%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221016140056246.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E4%BA%8C%E6%AC%A1%E7%AC%94%E8%AE%B0/ICT%E7%AC%AC%E4%BA%8C%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221011151208114.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E4%BA%8C%E6%AC%A1%E7%AC%94%E8%AE%B0/ICT%E7%AC%AC%E4%BA%8C%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221011155152139.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E4%BA%8C%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221011162258243.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E4%BA%8C%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221011162153475.png">
+<meta property="article:published_time" content="2023-01-26T04:43:49.000Z">
+<meta property="article:modified_time" content="2023-01-28T12:38:26.045Z">
+<meta property="article:author" content="懒懒当大厨">
+<meta property="article:tag" content="ICT 数通">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E4%BA%8C%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221015224338853.png">
+  
+    <link rel="alternate" href="/atom.xml" title="总会有地上的生灵 敢于直面雷霆的威光" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">总会有地上的生灵 敢于直面雷霆的威光</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://lanyangyangy.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-ICT第二次笔记" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/01/26/ICT%E7%AC%AC%E4%BA%8C%E6%AC%A1%E7%AC%94%E8%AE%B0/" class="article-date">
+  <time class="dt-published" datetime="2023-01-26T04:43:49.000Z" itemprop="datePublished">2023-01-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      ICT第二次笔记
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="第二次笔记"><a href="#第二次笔记" class="headerlink" title="第二次笔记"></a>第二次笔记</h2><h4 id="DHCP"><a href="#DHCP" class="headerlink" title="DHCP:"></a>DHCP:</h4><p>DHCP特点：即插即用 	统一管理 	使用效率高    可跨网段实现</p>
+<p>DHCP地址分配：手工分配 	自动分配	动态分配</p>
+<p>操作：<br>一、基于端口DHCP</p>
+<p>1.使能DHCP服务</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[Huawei]dhcp enable </span><br></pre></td></tr></table></figure>
+
+<p>2.配置路由器端口的ip地址</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[Huawei]int g0/0/0</span><br><span class="line">[Huawei-GigabitEthernet0/0/0]ip add 10.1.1.1 24</span><br></pre></td></tr></table></figure>
+
+<p>3.、在<strong>路由器端口</strong>配置一个地址池，也就是网段，其中包含：<strong>网段</strong>、<strong>网关</strong>、<strong>dns地址</strong>、<strong>租约时间</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[Huawei-GigabitEthernet0/0/0]dhcp select interface </span><br><span class="line">[Huawei-GigabitEthernet0/0/0]dhcp server dns-list 114.114.114.114    #分配DNS服务器</span><br><span class="line">[Huawei-GigabitEthernet0/0/0]dhcp server lease day 0 hour 2   #租约时间为2小时</span><br><span class="line">[Huawei-GigabitEthernet0/0/0]dhcp server excluded-ip-address 10.1.1.200 10.1.1.254  #排除200到254之间所有ip地址</span><br></pre></td></tr></table></figure>
+
+<p>4.输入<strong>display ip pool</strong>查看dhcp服务信息，可以看到名称、网段、子网掩码以及IP地址总数和已使用的IP地址数量等信息</p>
+<p>###在客户机上查看分配的dhcp信息，可以看到有IP地址、子网掩码、网关和dns地址（mac是本机网卡的）</p>
+<p>二、基于全局DHCP</p>
+<p>1.使能DHCP服务</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[Huawei]dhcp enable </span><br></pre></td></tr></table></figure>
+
+<p>2.配置DHCP地址池</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">[R3]ip pool 1                 创建地址池和名称 1</span><br><span class="line"></span><br><span class="line">[R3-ip-pool-1]network 10.1.1.0 mask 24        设置IP地址网段</span><br><span class="line"></span><br><span class="line">[R3-ip-pool-1]gateway-list 10.1.1.1       设置网关</span><br><span class="line"></span><br><span class="line">[R3-ip-pool-1]dns-list 114.114.114.114        设置DNS服务器</span><br><span class="line"></span><br><span class="line">[R3-ip-pool-1]lease day 2               租约时间2天</span><br><span class="line">[R3-ip-pool-1]excluded-ip-address 10.1.1.200 10.1.1.254     #排除200到254，不进行dhcp分配</span><br></pre></td></tr></table></figure>
+
+<p>3.路由器端口配置</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[R3] int e0/0/1</span><br><span class="line">[R3-Ethernet0/0/1]dhcp select global   设置全局</span><br><span class="line">[R3-Ethernet0/0/1]ip address 192.168.1.254 24        给接口设置IP地址</span><br></pre></td></tr></table></figure>
+
+
+
+<p>三、DHCP中继</p>
+<p>DHCP中继，其实就是在与DHCP Server不同而又需要申请DHCP服务的网络内，设置一个中继器，中继器在该网络中代替DHCP Server服务器接收DHCP Client的请求，并将DHCP Client发给DHCP Server的DCHP报文，以单播的形式发送给DHCP Server。DHCP Server在收到由DHCP发送来的DHCP 报文后，同样会把响应的DHCP报文发送给DHCP 中继。这样，DHCP其实是充当了一个中间人的作用，起到了在不同的网络中运行DHCP的目的。</p>
+<img src="/2023/01/26/ICT%E7%AC%AC%E4%BA%8C%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221015224338853.png" class="" title="image-20221015224338853">
+
+<hr>
+<img src="/2023/01/26/ICT%E7%AC%AC%E4%BA%8C%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221015202829829.png" class="" title="image-20221015202829829">
+
+<p>DHCP服务器：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">1.给路由端口配置IP地址</span><br><span class="line">&lt;Huawei&gt;sys</span><br><span class="line">[Huawei]int g0/0/0</span><br><span class="line">[Huawei-GigabitEthernet0/0/0]ip add 10.0.0.1 24</span><br><span class="line"></span><br><span class="line">2.配置一段路由（可静可动）</span><br><span class="line"></span><br><span class="line">[Huawei]ip route-static 192.168.1.0 255.255.255.0 10.0.0.2</span><br><span class="line"></span><br><span class="line">3.启用dhcp服务并配置一个dhcp池</span><br><span class="line">[Huawei]dhcp enable</span><br><span class="line">[Huawei]ip pool pool1</span><br><span class="line">[Huawei-ip-pool-pool1]network 192.168.1.0 mask 24</span><br><span class="line">[Huawei-ip-pool-pool1]gateway 192.168.1.254</span><br><span class="line">[Huawei-ip-pool-pool1]dns 192.168.1.100</span><br><span class="line">[Huawei-ip-pool-pool1]excluded-ip-address 192.168.1.100 192.168.1.120</span><br><span class="line">[Huawei-ip-pool-pool1]lease day 1</span><br><span class="line"></span><br><span class="line">4.在路由端口开启全局dhcp服务</span><br><span class="line"></span><br><span class="line">[Huawei]int g0/0/0</span><br><span class="line">[Huawei-GigabitEthernet0/0/0]dhcp select global </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>网关路由：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;Huawei&gt;sys</span><br><span class="line"></span><br><span class="line">1.配置与服务器（server)连接的端口IP地址（此地址要与服务器端口在同一网段上）</span><br><span class="line">[Huawei]int g0/0/0</span><br><span class="line">[Huawei-GigabitEthernet0/0/0]ip add 10.0.0.2 24</span><br><span class="line"></span><br><span class="line">2.配置与交换机连接的端口IP地址</span><br><span class="line">[Huawei-GigabitEthernet0/0/1]ip add 192.168.1.254 24</span><br><span class="line">3.在路由器(client)端口（不一定是网关）做代理，并且要指明要代理哪个dhcp服务器的端口</span><br><span class="line">[Huawei-GigabitEthernet0/0/1]dhcp select relay</span><br><span class="line">[Huawei-GigabitEthernet0/0/1]dhcp relay server-ip 10.0.0.1</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="LLDP协议"><a href="#LLDP协议" class="headerlink" title="LLDP协议"></a>LLDP协议</h4><p>查看与自己连接设备是什么</p>
+<p>使用：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line">1.启用LLDP</span><br><span class="line">lldp enable </span><br><span class="line">2.自动探测</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">查看lldp协议简要信息：</span><br><span class="line">[AR1]display lldp neighbor brief </span><br><span class="line">Local Intf   Neighbor Dev             Neighbor Intf             Exptime</span><br><span class="line">GE0/0/0      SW1                      GE0/0/3                   110    </span><br><span class="line">GE0/0/1      DHCP SERVER              GE0/0/0                   117  </span><br><span class="line">本地接口      对端设备名称             对端连接接口              老化时间（小于90时会发送请求，更新回120）</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">查看接口邻居详细信息</span><br><span class="line">[AR1]display lldp neighbor interface g0/0/0</span><br><span class="line">GigabitEthernet0/0/0 has 1 neighbors:</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Neighbor index : 1</span><br><span class="line">Chassis type   :macAddress </span><br><span class="line">Chassis ID     :4c1f-cc1a-2762 </span><br><span class="line">Port ID type   :interfaceName </span><br><span class="line">Port ID        :GigabitEthernet0/0/3     #邻居直连的接口号</span><br><span class="line">Port description    :NA                  #是否有接口描述，有的话内容是什么</span><br><span class="line">System name         :SW1                 #设备名称</span><br><span class="line">System description  :S5700-28C-HI        #设备型号</span><br><span class="line">Huawei Versatile Routing Platform Software </span><br><span class="line"> VRP (R) software,Version 3.30 (S5700 V200R001C00)     #系统版本信息</span><br><span class="line"> Copyright (C) 2007 Huawei Technologies Co., Ltd.</span><br><span class="line">System capabilities supported   :bridge </span><br><span class="line">System capabilities enabled     :bridge </span><br><span class="line">Management address type  :all802</span><br><span class="line">Management address       : 4c1f-cc1a-2762       #没有配置管理ip就显示mac</span><br><span class="line">Management address type  :ipV4</span><br><span class="line">Management address       : 10.1.1.166           #此处显示的是管理ip</span><br><span class="line">Expired time   :110s</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Auto-negotiation supported    :No </span><br><span class="line">Auto-negotiation enabled      :No</span><br><span class="line">OperMau   :speed(0)/duplex(Half)</span><br><span class="line">                                          </span><br><span class="line">Power port class         :PD </span><br><span class="line">PSE power supported      :No </span><br><span class="line">PSE power enabled        :No </span><br><span class="line">PSE pairs control ability:No </span><br><span class="line">Power pairs              :Unknown </span><br><span class="line">Port power classification:Unknown</span><br><span class="line"></span><br><span class="line">Link aggregation supported:Yes </span><br><span class="line">Link aggregation enabled :No </span><br><span class="line">Aggregation port ID      :0 </span><br><span class="line">Maximum frame Size       :9216</span><br><span class="line"></span><br><span class="line">MED Device information             </span><br><span class="line">Device class   :Network Connectivity</span><br><span class="line"></span><br><span class="line">HardwareRev       :VER B</span><br><span class="line">FirmwareRev       :NA</span><br><span class="line">SoftwareRev       :Version 3.30 V200R001C00</span><br><span class="line">SerialNum         :NA</span><br><span class="line">Manufacturer name :HUAWEI TECH CO., LTD</span><br><span class="line">Model name        :NA</span><br><span class="line">Asset tracking identifier :NA</span><br><span class="line"></span><br><span class="line">Power Type               :Unknown         </span><br><span class="line">PoE PSE power source     :Unknown </span><br><span class="line">Port PSE Priority        :Unknown </span><br><span class="line">Port Available power value:2</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h4 id="以太网交口技术"><a href="#以太网交口技术" class="headerlink" title="以太网交口技术"></a>以太网交口技术</h4><p>以太网接口的双工模式：</p>
+<ul>
+<li>全双工：端口同时发送和接收数据包</li>
+<li>半双工：端口同一时刻只能发送数据包或接收数据包</li>
+<li><strong>自协商</strong>：端口双工状态由本端口和对端端口自动协商而定</li>
+</ul>
+<p>以太网光接口只能工作在全双工模式下</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">duplex&#123;full|half&#125; 设置双工模式</span><br><span class="line">undo duplex 恢复双工模式为缺省值</span><br><span class="line">negotiation auto 开启接口自动协商功能（默认开启）</span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="端口聚合"><a href="#端口聚合" class="headerlink" title="端口聚合"></a>端口聚合</h5><p>端口聚合的优点：</p>
+<p>提高链路带宽</p>
+<p>流量负载分担</p>
+<p>提高可靠性：同组成员彼此动态备份</p>
+<p>手工模式：</p>
+<img src="/2023/01/26/ICT%E7%AC%AC%E4%BA%8C%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221016110740335.png" class="" title="image-20221016110740335">
+
+<p>SW1:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">[SW1]interface Eth-Trunk 1</span><br><span class="line">[SW1-Eth-Trunk1]mode manual load-balance //选择为手动负载分担，缺省即为手工模式，可不配置</span><br><span class="line">[SW1-Eth-Trunk1]load-balance ? //查看可配置的模式，缺省为src-dst-ip，</span><br><span class="line"></span><br><span class="line">dst-ip According to destination IP hash arithmetic</span><br><span class="line">dst-mac According to destination MAC hash arithmetic</span><br><span class="line">src-dst-ip According to source/destination IP hash arithmetic //缺省的配置</span><br><span class="line">src-dst-mac According to source/destination MAC hash arithmetic</span><br><span class="line">src-ip According to source IP hash arithmetic</span><br><span class="line">src-mac According to source MAC hash arithmetic</span><br><span class="line"></span><br><span class="line">[SW1-Eth-Trunk1]load-balance src-dst-ip //此处使用src-dst-ip</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">方法一：</span><br><span class="line"></span><br><span class="line">[SW1-Eth-Trunk1]trunkport GigabitEthernet 0/0/1 to 0/0/2 //把GE0/0/1到GE0/0/2加入</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">方法二：</span><br><span class="line"></span><br><span class="line">[Huawei]interface g0/0/1</span><br><span class="line">[Huawei-GigabitEthernet0/0/1]eth-trunk 1 </span><br><span class="line"></span><br><span class="line">[Huawei-GigabitEthernet0/0/1]inter g0/0/2</span><br><span class="line">[Huawei-GigabitEthernet0/0/2]eth-trunk 1 </span><br></pre></td></tr></table></figure>
+
+<p>SW2的配置与SW1的配置相同</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">display eth-trunk 1   使用该命令可以查看配置后的情况</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="LACP模式"><a href="#LACP模式" class="headerlink" title="LACP模式"></a><strong>LACP模式</strong></h4><p>在LACP模式下，部分链路是活动链路，所有活动链路均参与数据转发。如果某条活动链路故障，链路聚合组自动在非活动链路中选择一条链路作为活动链路，来参与数据转发。</p>
+<img src="/2023/01/26/ICT%E7%AC%AC%E4%BA%8C%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221016140056246.png" class="" title="image-20221016140056246">
+
+<p>SW1:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">[SW1]interface Eth-Trunk 2 //创建eth-trunk 2聚合口</span><br><span class="line">[SW1-Eth-Trunk2]mode lacp-static //配置模式为lacp静态模式</span><br><span class="line">[SW1-Eth-Trunk2]trunkport GigabitEthernet 0/0/1 to 0/0/3 //把GE0/0/1 到GE0/0/3加入到聚合组</span><br><span class="line"></span><br><span class="line">[SW1]lacp priority 100        在SW1上配置系统优先级为100，使其成为LACP主动端</span><br><span class="line">[SW1]interface Eth-Trunk 2    在SW1上配置活动接口上限阈值为2</span><br><span class="line">[SW1-Eth-Trunk2]max active-linknumber 2</span><br><span class="line"></span><br><span class="line">在SW1进入物理接口配置接口优先级，确定活动链路，此处只配置GE1和GE2口，GE3口保持默认值32768。</span><br><span class="line">[SW1]interface GigabitEthernet 0/0/1</span><br><span class="line">[SW1-GigabitEthernet0/0/1]lacp priority 100</span><br><span class="line">[SW1]interface GigabitEthernet 0/0/2</span><br><span class="line">[SW1-GigabitEthernet0/0/2]lacp priority 100</span><br></pre></td></tr></table></figure>
+
+
+
+<p>SW2:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">[SW2]interface Eth-Trunk 2</span><br><span class="line">[SW2-Eth-Trunk2]mode lacp-static //配置模式为lacp静态模式</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">分别把GE0/0/1、GE0/0/2、GE0/0/3加入到聚合口（此处采用的另一种方法，不是批量加入了）</span><br><span class="line">[SW2]interface GigabitEthernet 0/0/1</span><br><span class="line">[SW2-GigabitEthernet0/0/1]eth-trunk 2</span><br><span class="line">[SW2]interface GigabitEthernet 0/0/2</span><br><span class="line">[SW2-GigabitEthernet0/0/2]eth-trunk 2</span><br><span class="line">[SW2]interface GigabitEthernet 0/0/3</span><br><span class="line">[SW2-GigabitEthernet0/0/3]eth-trunk 2</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">SW2上优先级保持默认，在SW2上配置活动接口上限阈值为2</span><br><span class="line">[SW2]interface Eth-Trunk 2</span><br><span class="line">[SW2-Eth-Trunk2]max active-linknumber 2</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h4 id="VLAN"><a href="#VLAN" class="headerlink" title="VLAN"></a>VLAN</h4><p>VLAN产生原因缺少转发控制手段的以太网 ，隔离其他广播域。</p>
+<p>一个VLAN&#x3D;一个广播域&#x3D;一个独立网段</p>
+<p>交换机上所有接口默认都在VLAN1上</p>
+<h6 id="单交换机VLAN划分"><a href="#单交换机VLAN划分" class="headerlink" title="单交换机VLAN划分"></a>单交换机VLAN划分</h6><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[Huawei]vlan 2</span><br><span class="line">[Huawei-vlan2]quit</span><br><span class="line">[Huawei]inter g0/0/2</span><br><span class="line">[Huawei-GigabitEthernet0/0/2]port link-type access   #交换机端口工作模式：access（PC,终端设备），trunk（和交换机互联）</span><br><span class="line">[Huawei-GigabitEthernet0/0/2]port default vlan 2     #将端口划入vlan2 </span><br></pre></td></tr></table></figure>
+
+<p><strong>display vlan</strong>   检查VLAN划分</p>
+<h6 id="多个交换机VLAN划分"><a href="#多个交换机VLAN划分" class="headerlink" title="多个交换机VLAN划分"></a>多个交换机VLAN划分</h6><p>该接口是交换机与交换机连接端口</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[Huawei]interface g0/0/4</span><br><span class="line"></span><br><span class="line">[Huawei-GigabitEthernet0/0/4]port link-type trunk       #默认情况下只允许vlan1 通过</span><br><span class="line">[Huawei-GigabitEthernet0/0/4]port trunk allow-pass vlan 1 2   #允许vlan1 和vlan2 同时通过trunk接口</span><br></pre></td></tr></table></figure>
+
+
+
+<h6 id="修改trunk链路本征（本来特征，PVID）"><a href="#修改trunk链路本征（本来特征，PVID）" class="headerlink" title="修改trunk链路本征（本来特征，PVID）"></a>修改trunk链路本征（本来特征，PVID）</h6><p>配置PVID后，如果不是划分的pvid vlan 号就会打上vlan标签</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[Huawei]vlan 99 </span><br><span class="line">[Huawei-vlan99]inter g0/0/4</span><br><span class="line">[Huawei-GigabitEthernet0/0/4]port trunk pvid vlan 99</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h6 id="配置SVI"><a href="#配置SVI" class="headerlink" title="配置SVI"></a>配置SVI</h6><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">interface Vlanif10  创建交换机虚拟接口(SVI) vlanif 10，属于三层接口，10 代表vlan 10 </span><br><span class="line">ip address 192.168.10.1 255.255.255.0 配置ip地址作为vlan 10 用户的网关</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+<h2 id="江老师小课堂——-textcolor-red-ping详解"><a href="#江老师小课堂——-textcolor-red-ping详解" class="headerlink" title="江老师小课堂——$\textcolor{red}{ping详解}$"></a>江老师小课堂——$\textcolor{red}{ping详解}$</h2><p><strong>ping</strong>可以理解为是一个应用程序，位于用户应用层（在系统应用层上方）</p>
+<p>当发送ping命令后，主机会通过<strong>ICMP报文</strong>来封装信息</p>
+<img src="ICT第二次笔记/image-20221011151208114.png" alt="image-20221011151208114" style="zoom:150%;" />
+
+<p>ICMP报文会封装在<strong>IP数据报</strong>中，此时IP数据报中有一个标识位(RFC)为<strong>1</strong></p>
+<blockquote>
+<p>协议                 RFC</p>
+<p>TCP					6</p>
+<p>UDP				  17</p>
+<p>ICMP				1</p>
+<p>IGMP				2</p>
+<p>OSPF                89</p>
+</blockquote>
+<img src="ICT第二次笔记/image-20221011155152139.png" alt="image-20221011155152139" style="zoom:150%;" />
+
+<p>但是在第一次ping的时候，并不知道对方的MAC地址，帧无法发送。这是主机会发送一道帧（里面封装的是<strong>ARP报文</strong>），【交换机会记录源MAC地址】交换机接收到这道帧后，会立即泛洪，各个主机会查看是否是自己的IP地址，若是则会回应相同格式的帧，发送自己的MAC地址。交换机也会记录目的MAC。</p>
+<p><strong>请求：</strong></p>
+<img src="/2023/01/26/ICT%E7%AC%AC%E4%BA%8C%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221011162258243.png" class="">
+
+<p>此时目的MAC里面装的是全0.</p>
+<p><strong>响应</strong>：</p>
+<img src="/2023/01/26/ICT%E7%AC%AC%E4%BA%8C%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221011162153475.png" class="" title="image-20221011162153475">
+
+<p>源主机收到响应帧后会更新<strong>ARP表</strong>（里面记录的是MAC地址和IP地址的对应关系），在得到了目的MAC地址后，源主机可以将封装ICMP报文的帧补全，并发送出去。</p>
+<p>至此Ping完成。</p>
+<p>注意：</p>
+<ol>
+<li>ARP缓存表中，只存有IP和MAC的对应关系，主机并不需要知道到底目的主机到底是哪台，名字只是认为添加的。</li>
+<li>主机是无法发送信息给交换机的，因此交换机发现帧的目的地址是自己时就会直接把帧丢弃。</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E4%BA%8C%E6%AC%A1%E7%AC%94%E8%AE%B0/" data-id="cldfxvtab0005vg9u0b1v0m4u" data-title="ICT第二次笔记" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ICT-%E6%95%B0%E9%80%9A/" rel="tag">ICT 数通</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/01/26/ICT%E7%AC%AC%E4%B8%89%E6%AC%A1%E7%AC%94%E8%AE%B0/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          ICT第三次笔记
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2023/01/26/ICT%E7%AC%AC%E4%B8%80%E6%AC%A1%E7%AC%94%E8%AE%B0/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">ICT第一次笔记</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ICT-%E6%95%B0%E9%80%9A/" rel="tag">ICT 数通</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/numpy/" rel="tag">numpy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" rel="tag">python 面向对象</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/ICT-%E6%95%B0%E9%80%9A/" style="font-size: 20px;">ICT 数通</a> <a href="/tags/numpy/" style="font-size: 10px;">numpy</a> <a href="/tags/python-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" style="font-size: 10px;">python 面向对象</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/01/">January 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/12/">December 2022</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/01/26/ICT%E7%AC%AC%E5%8D%81%E4%B8%80%E6%AC%A1%E7%AC%94%E8%AE%B0/">ICT第十一次笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2023/01/26/ICT%E7%AC%AC%E5%8D%81%E6%AC%A1%E7%AC%94%E8%AE%B0/">ICT第十次笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2023/01/26/ICT%E7%AC%AC%E4%B9%9D%E6%AC%A1%E7%AC%94%E8%AE%B0/">ICT第九次笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2023/01/26/ICT%E7%AC%AC%E5%85%AB%E6%AC%A1%E7%AC%94%E8%AE%B0/">ICT第八次笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2023/01/26/ICT%E7%AC%AC%E4%B8%83%E6%AC%A1%E7%AC%94%E8%AE%B0/">ICT第七次笔记</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 懒懒当大厨<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

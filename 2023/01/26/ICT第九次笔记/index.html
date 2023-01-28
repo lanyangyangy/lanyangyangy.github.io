@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>ICT第九次笔记 | 总会有地上的生灵 敢于直面雷霆的威光</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="组播定义：单一的信息流沿组播分发时被同时发送给一组用户，相同的组播数据流在每一条链路上至多有一份。 相对于单播和广播，使用组播的好处如下： 相比$\textcolor{blue}{单播}$，用户的增加不会导致信息源负载的过重，不会导致网络资源消耗的显著增加。 相比$\textcolor{blue}{广播}$，不会造成网络资源的浪费，并能提高信息传输的安全性，并且组播可以实现跨网段的传输。 组播报文">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ICT第九次笔记">
+<meta property="og:url" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E4%B9%9D%E6%AC%A1%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:site_name" content="总会有地上的生灵 敢于直面雷霆的威光">
+<meta property="og:description" content="组播定义：单一的信息流沿组播分发时被同时发送给一组用户，相同的组播数据流在每一条链路上至多有一份。 相对于单播和广播，使用组播的好处如下： 相比$\textcolor{blue}{单播}$，用户的增加不会导致信息源负载的过重，不会导致网络资源消耗的显著增加。 相比$\textcolor{blue}{广播}$，不会造成网络资源的浪费，并能提高信息传输的安全性，并且组播可以实现跨网段的传输。 组播报文">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E4%B9%9D%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221205163251755.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E4%B9%9D%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221205165123390.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E4%B9%9D%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221205165511443.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E4%B9%9D%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221205165952967.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E4%B9%9D%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221205173118053.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E4%B9%9D%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221205205235297.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E4%B9%9D%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221205210915267.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E4%B9%9D%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221206162108677.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E4%B9%9D%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221206195606421.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E4%B9%9D%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221206195853432.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E4%B9%9D%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221206195916247.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E4%B9%9D%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221206200229160.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E4%B9%9D%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221206201541434.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E4%B9%9D%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221208190338130.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E4%B9%9D%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221208191618865.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E4%B9%9D%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221208191838413.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/ICT%E7%AC%AC%E4%B9%9D%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221208192243290.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/ICT%E7%AC%AC%E4%B9%9D%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221206205204072.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E4%B9%9D%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221206210757887.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E4%B9%9D%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221208190450691.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E4%B9%9D%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221208192542678.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E4%B9%9D%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221208192813009.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E4%B9%9D%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221208192949324.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E4%B9%9D%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221206221111088.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E4%B9%9D%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221206231253925.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E4%B9%9D%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221206231405457.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E4%B9%9D%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221206231426336.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E4%B9%9D%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221208194554020.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E4%B9%9D%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221213145857442.png">
+<meta property="article:published_time" content="2023-01-26T04:52:06.000Z">
+<meta property="article:modified_time" content="2023-01-28T12:38:18.965Z">
+<meta property="article:author" content="懒懒当大厨">
+<meta property="article:tag" content="ICT 数通">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E4%B9%9D%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221205163251755.png">
+  
+    <link rel="alternate" href="/atom.xml" title="总会有地上的生灵 敢于直面雷霆的威光" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">总会有地上的生灵 敢于直面雷霆的威光</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://lanyangyangy.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-ICT第九次笔记" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/01/26/ICT%E7%AC%AC%E4%B9%9D%E6%AC%A1%E7%AC%94%E8%AE%B0/" class="article-date">
+  <time class="dt-published" datetime="2023-01-26T04:52:06.000Z" itemprop="datePublished">2023-01-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      ICT第九次笔记
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h3 id="组播"><a href="#组播" class="headerlink" title="组播"></a>组播</h3><p>定义：单一的信息流沿组播分发时被同时发送给一组用户，相同的组播数据流在每一条链路上至多有一份。</p>
+<p>相对于单播和广播，使用组播的好处如下：</p>
+<p>相比$\textcolor{blue}{单播}$，用户的增加不会导致信息源负载的过重，不会导致网络资源消耗的显著增加。</p>
+<p>相比$\textcolor{blue}{广播}$，不会造成网络资源的浪费，并能提高信息传输的安全性，并且组播可以实现跨网段的传输。</p>
+<h5 id="组播报文结构"><a href="#组播报文结构" class="headerlink" title="组播报文结构"></a>组播报文结构</h5><img src="/2023/01/26/ICT%E7%AC%AC%E4%B9%9D%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221205163251755.png" class="" title="image-20221205163251755">
+
+<h5 id="组播IP地址"><a href="#组播IP地址" class="headerlink" title="组播IP地址"></a>组播IP地址</h5><p>在IPv4地址空间中，D类地址(224.0.0.1~239.255.255.254)被用于组播。一个组播地址就表示一个点到多点的数据流。</p>
+<p>在大多数情况下，同一个组播网络里不同的业务就需要使用不同的组播IP地址。</p>
+<img src="/2023/01/26/ICT%E7%AC%AC%E4%B9%9D%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221205165123390.png" class="" title="image-20221205165123390">
+
+<h5 id="组播MAC地址"><a href="#组播MAC地址" class="headerlink" title="组播MAC地址"></a>组播MAC地址</h5><p>以太网传输IPv4单播报文时，目的MAC地址使用的是接收者的MAC地址。但是在传输组播数据时，其目的地就不再是一个具体的接收者，而是一个成员不确定组，要使用IPv4组播MAC地址。</p>
+<p>组播IP可以一对多，用于多台设备，相当于他们在同一个组里。</p>
+<img src="/2023/01/26/ICT%E7%AC%AC%E4%B9%9D%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221205165511443.png" class="" title="image-20221205165511443">
+
+<h5 id="组播网络基本架构"><a href="#组播网络基本架构" class="headerlink" title="组播网络基本架构"></a>组播网络基本架构</h5><img src="/2023/01/26/ICT%E7%AC%AC%E4%B9%9D%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221205165952967.png" class="" title="image-20221205165952967">
+
+
+
+<p>基本实验</p>
+<img src="/2023/01/26/ICT%E7%AC%AC%E4%B9%9D%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221205173118053.png" class="" title="image-20221205173118053">
+
+<p>目的：实现PC1与MCS1组播</p>
+<p>路由器配置：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[Huawei]multicast routing-enable </span><br><span class="line">[Huawei]in g0/0/0</span><br><span class="line">[Huawei-GigabitEthernet0/0/0]pim</span><br><span class="line">[Huawei-pim]quit</span><br><span class="line">[Huawei]igmp    //初始化igmp</span><br><span class="line">[Huawei-igmp]int g0/0/0</span><br><span class="line">[Huawei-GigabitEthernet0/0/0]pim dm</span><br><span class="line">[Huawei-GigabitEthernet0/0/0]int g0/0/1</span><br><span class="line">[Huawei-GigabitEthernet0/0/0]igmp version 2</span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="组播服务模型"><a href="#组播服务模型" class="headerlink" title="组播服务模型"></a>组播服务模型</h5><p>ASM（任意源组播）：组成员加入组播组后，组成员可以收到$\textcolor{pink}{任意源}$发送到该组的数据</p>
+<p>SSM（指定源组播）：组成员加入组播组后，组成员只会收到$\textcolor{pink}{指定源}$发送到改组的数据。</p>
+<img src="/2023/01/26/ICT%E7%AC%AC%E4%B9%9D%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221205205235297.png" class="" title="image-20221205205235297">
+
+
+
+<p>组播路由表除了目的网络和出接口外还需要添加组播源和入接口的信息。设备仅转发从特定唯一的入接口收到的数据，从而避免组播转发时产生环路、次优、重复报文（部分解决）等问题。</p>
+<p>对于相同的组播源，设备通过RPF（$\textcolor{red}{反向路径转发}$)检查可以确定设备上唯一的组播流量入接口。</p>
+<img src="/2023/01/26/ICT%E7%AC%AC%E4%B9%9D%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221205210915267.png" class="" title="image-20221205210915267">
+
+<p>组播协议：</p>
+<p>成员网络协议IGMP：用于告知组播网络，组成员的位置与所加组播组。</p>
+<p>转发网络协议</p>
+<p>PIM（协议无关组播）：生成AS域内的组播分发树。</p>
+<p>MSDP（组播源发现协议）：帮助生成AS域间的组播分发树。</p>
+<p>MBGP（组播BGP）：帮助跨域进行RPF校验。</p>
+<h4 id="IGMP"><a href="#IGMP" class="headerlink" title="IGMP"></a>IGMP</h4><h5 id="IGMPv1"><a href="#IGMPv1" class="headerlink" title="IGMPv1"></a>IGMPv1</h5><p>IGMPv1主要基于查询和响应机制完成组播组管理。</p>
+<p>查询和响应机制由两种报文实现：</p>
+<ul>
+<li>普遍组查询报文（Query）：查询器向共享网络上所有主机和路由器发送的查询报文，用于查询哪些组播组存在成员。</li>
+<li>成员关系报告报文：主机向查询器发送的报告报文，用于申请加入某个组播组或者应答查询报文。</li>
+</ul>
+<p>由于IGMP报文是组播报文，因此一个多路访问网络里只需要一个组播路由器发送查询报文即可，该组播路由器则被称为IGMP查询器。</p>
+<p>IGMPv1离组不通知，使用超时机制，依赖PIM协议</p>
+<h5 id="IGMPv2"><a href="#IGMPv2" class="headerlink" title="IGMPv2"></a>IGMPv2</h5><p>IGMPv2增加了离组机制</p>
+<img src="/2023/01/26/ICT%E7%AC%AC%E4%B9%9D%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221206162108677.png" class="" title="image-20221206162108677">
+
+<h5 id="版本差异"><a href="#版本差异" class="headerlink" title="版本差异"></a>版本差异<img src="/2023/01/26/ICT%E7%AC%AC%E4%B9%9D%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221206195606421.png" class="" title="image-20221206195606421"></h5><img src="/2023/01/26/ICT%E7%AC%AC%E4%B9%9D%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221206195853432.png" class="" title="image-20221206195853432">
+
+<h5 id="IGMP-Snooping"><a href="#IGMP-Snooping" class="headerlink" title="IGMP Snooping"></a>IGMP Snooping</h5><img src="/2023/01/26/ICT%E7%AC%AC%E4%B9%9D%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221206195916247.png" class="" title="image-20221206195916247">
+
+
+
+<img src="/2023/01/26/ICT%E7%AC%AC%E4%B9%9D%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221206200229160.png" class="" title="image-20221206200229160">
+
+<img src="/2023/01/26/ICT%E7%AC%AC%E4%B9%9D%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221206201541434.png" class="" title="image-20221206201541434">
+
+
+
+<p>组播分发树：</p>
+<ul>
+<li>以组播源为根，组播成员为叶子的组播分发树称为<strong>SPT</strong>，在PIM-DM与PIM-SM中均有使用。</li>
+<li>以RP为根，组播组成员为叶子的组播分发树称为<strong>RPT</strong>，在PIM-SM中使用。</li>
+</ul>
+<h4 id="PIM-DM"><a href="#PIM-DM" class="headerlink" title="PIM-DM"></a>PIM-DM</h4><p>主要用在组成员较少且相对密集的网络中，通过“扩散-剪枝”的方式来形成组播转发树。</p>
+<img src="/2023/01/26/ICT%E7%AC%AC%E4%B9%9D%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221208190338130.png" class="" title="image-20221208190338130">
+
+<h5 id="扩散机制"><a href="#扩散机制" class="headerlink" title="扩散机制"></a>扩散机制</h5><p>组播源发送的组播报文会在全网内扩散。当PIM路由器接收到组播报文，先进行RPF检查，通过后会在该路由器上创建（S,G）表项，之后会向所有PIM邻居发送。</p>
+<p>PIM-DM形成的（S-G）表项有老化时间（静默210s)，如果老化时间超时前没有收到新的组播报文，则删除（S-G）表项。</p>
+<img src="/2023/01/26/ICT%E7%AC%AC%E4%B9%9D%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221208191618865.png" class="" title="image-20221208191618865">
+
+<h5 id="剪枝机制"><a href="#剪枝机制" class="headerlink" title="剪枝机制"></a>剪枝机制</h5><p>对于没有组成员连接的组播路由器，组播网络无需再将组播流量继续放往该设备。通过剪枝机制，组播可以将此类路径剪枝。</p>
+<img src="/2023/01/26/ICT%E7%AC%AC%E4%B9%9D%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221208191838413.png" class="" title="image-20221206220909094">
+
+<h5 id="嫁接机制"><a href="#嫁接机制" class="headerlink" title="嫁接机制"></a>嫁接机制</h5><p>叶子路由通过IGMP了解到与其相连的用户网段上，组播组G有新的成员加入。随后叶子路由器会<strong>基于本址的组播路由表</strong>向上有发送Graft报文，请求上有路由器恢复相应出接口转发，将其添加在（S-G)表项下游接口列表中。</p>
+<p><img src="/ICT%E7%AC%AC%E4%B9%9D%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221208192243290.png" alt="image-20221206220820358"><img src="/ICT%E7%AC%AC%E4%B9%9D%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221206205204072.png" alt="image-20221206205204072"></p>
+<h5 id="PIM-DM协议报文"><a href="#PIM-DM协议报文" class="headerlink" title="PIM-DM协议报文"></a><img src="/2023/01/26/ICT%E7%AC%AC%E4%B9%9D%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221206210757887.png" class="" title="image-20221206210735893">PIM-DM协议报文</h5><img src="/2023/01/26/ICT%E7%AC%AC%E4%B9%9D%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221208190450691.png" class="" title="image-20221208190450691">
+
+
+
+<h5 id="实验：组播路由协议pim-dm"><a href="#实验：组播路由协议pim-dm" class="headerlink" title="实验：组播路由协议pim-dm"></a>实验：组播路由协议pim-dm</h5><p>拓扑图：<img src="/2023/01/26/ICT%E7%AC%AC%E4%B9%9D%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221208192542678.png" class="" title="image-20221208192542678">配置PIM-DM：</p>
+<p>R1:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">multicast routing-enable</span><br><span class="line">interface GigabitEthernet0/0/0</span><br><span class="line"> pim dm</span><br><span class="line"> </span><br><span class="line">interface GigabitEthernet0/0/1</span><br><span class="line"> pim dm</span><br><span class="line"></span><br><span class="line">interface GigabitEthernet0/0/2</span><br><span class="line"> pim dm</span><br></pre></td></tr></table></figure>
+
+<p>R2:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">multicast routing-enable</span><br><span class="line">interface GigabitEthernet0/0/0</span><br><span class="line"> pim dm</span><br><span class="line"> </span><br><span class="line">interface GigabitEthernet0/0/1</span><br><span class="line"> pim dm</span><br></pre></td></tr></table></figure>
+
+<p>R3:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">multicast routing-enable</span><br><span class="line">interface GigabitEthernet0/0/0</span><br><span class="line"> pim dm</span><br><span class="line"> </span><br><span class="line">interface GigabitEthernet0/0/1</span><br><span class="line"> pim dm</span><br></pre></td></tr></table></figure>
+
+<p>R4:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">multicast routing-enable</span><br><span class="line">interface GigabitEthernet0/0/0</span><br><span class="line"> pim dm</span><br><span class="line"> </span><br><span class="line">interface GigabitEthernet0/0/1</span><br><span class="line"> pim dm</span><br></pre></td></tr></table></figure>
+
+<p>配置igmp：</p>
+<p>R4：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">interface GigabitEthernet0/0/2</span><br><span class="line">igmp version 2</span><br><span class="line">igmp enable</span><br></pre></td></tr></table></figure>
+
+<p>PC1:</p>
+<img src="/2023/01/26/ICT%E7%AC%AC%E4%B9%9D%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221208192813009.png" class="" title="image-20221208192813009">
+
+<h4 id="PIM-SM"><a href="#PIM-SM" class="headerlink" title="PIM-SM"></a>PIM-SM</h4><p>PIM-DM的局限性</p>
+<img src="/2023/01/26/ICT%E7%AC%AC%E4%B9%9D%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221208192949324.png" class="" title="image-20221206221042897">
+
+<h5 id="PIM-SM协议报文"><a href="#PIM-SM协议报文" class="headerlink" title="PIM-SM协议报文"></a>PIM-SM协议报文</h5><img src="/2023/01/26/ICT%E7%AC%AC%E4%B9%9D%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221206221111088.png" class="" title="image-20221206221111088">
+
+
+
+<h5 id="汇聚点RP"><a href="#汇聚点RP" class="headerlink" title="汇聚点RP"></a>汇聚点RP</h5><p>用于处理源端DR注册信息机组成员请求加入，网络中的所有PIM路由器都必须知道RP的地址。</p>
+<ul>
+<li>静态RP：在网络中的所有PIM路由器都必须配置相同的RP地址，静态指定RP的位置。</li>
+<li>动态RP：通过选举机制在多个C-RP之间选举出RP</li>
+</ul>
+<h5 id="RPT创建"><a href="#RPT创建" class="headerlink" title="RPT创建"></a>RPT创建</h5><img src="/2023/01/26/ICT%E7%AC%AC%E4%B9%9D%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221206231253925.png" class="" title="image-20221206231253925">
+
+<h5 id="首次形成组播分发树"><a href="#首次形成组播分发树" class="headerlink" title="首次形成组播分发树"></a>首次形成组播分发树</h5><p>PIM-SM模式首次形成组播分发树主要依赖RPT构建机制，组播源注册机制与DR选举机制。</p>
+<p>RPT构建机制：组播叶子路由器主动建立到RP的组播分发树</p>
+<p>组播源注册机制：通过该机制形成组播源到RP的组播分发树。</p>
+<p>DR选举机制：DR负责源端或组成员端组播报文的手法，避免重复组播报文，同时成员端DR还负责发送Join加组信息。</p>
+<h6 id="组播源注册机制"><a href="#组播源注册机制" class="headerlink" title="组播源注册机制"></a>组播源注册机制</h6><img src="/2023/01/26/ICT%E7%AC%AC%E4%B9%9D%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221206231405457.png" class="" title="image-20221206214421461">
+
+<h6 id="DR选举机制"><a href="#DR选举机制" class="headerlink" title="DR选举机制"></a>DR选举机制</h6><img src="/2023/01/26/ICT%E7%AC%AC%E4%B9%9D%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221206231426336.png" class="" title="image-20221206231426336">
+
+<h5 id="PIM-SM-1"><a href="#PIM-SM-1" class="headerlink" title="PIM-SM"></a>PIM-SM</h5><img src="/2023/01/26/ICT%E7%AC%AC%E4%B9%9D%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221208194554020.png" class="" title="image-20221208194554020">
+
+<p>配置：</p>
+<p>R1:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">multicast routing-enable </span><br><span class="line"></span><br><span class="line">interface GigabitEthernet0/0/0</span><br><span class="line"> pim sm</span><br><span class="line"> </span><br><span class="line">interface GigabitEthernet0/0/1</span><br><span class="line"> pim sm</span><br><span class="line"> </span><br><span class="line">pim</span><br><span class="line">static-rp 2.2.2.2     //静态</span><br><span class="line"></span><br><span class="line">int loopback 0     //动态</span><br><span class="line">pim sm </span><br><span class="line"></span><br><span class="line">pim</span><br><span class="line">c-bsr loopback 0</span><br></pre></td></tr></table></figure>
+
+<p>R2:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">multicast routing-enable </span><br><span class="line">interface GigabitEthernet0/0/0</span><br><span class="line">pim sm</span><br><span class="line"></span><br><span class="line">interface GigabitEthernet0/0/1</span><br><span class="line">pim sm </span><br><span class="line"></span><br><span class="line">interface GigabitEthernet0/0/2</span><br><span class="line">pim sm</span><br><span class="line"> </span><br><span class="line">pim</span><br><span class="line">static-rp 2.2.2.2    //静态</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>R3:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">multicast routing-enable </span><br><span class="line">interface GigabitEthernet0/0/0</span><br><span class="line">pim sm</span><br><span class="line"></span><br><span class="line">pim</span><br><span class="line">static-rp 2.2.2.2     //配置静态RP</span><br></pre></td></tr></table></figure>
+
+<p>R4:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">multicast routing-enable </span><br><span class="line">interface GigabitEthernet0/0/0</span><br><span class="line">pim sm</span><br><span class="line"></span><br><span class="line">pim</span><br><span class="line">static-rp 2.2.2.2  </span><br></pre></td></tr></table></figure>
+
+<p>配置IGMP</p>
+<p>R5:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">interface GigabitEthernet0/0/1</span><br><span class="line">igmp version 2</span><br><span class="line">igmp enable</span><br></pre></td></tr></table></figure>
+
+<img src="/2023/01/26/ICT%E7%AC%AC%E4%B9%9D%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221213145857442.png" class="" title="image-20221213145857442">
+
+<p>成为BSR后仍可以是RP</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E4%B9%9D%E6%AC%A1%E7%AC%94%E8%AE%B0/" data-id="cldfxvtaa0003vg9u3p2f6hwc" data-title="ICT第九次笔记" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ICT-%E6%95%B0%E9%80%9A/" rel="tag">ICT 数通</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/01/26/ICT%E7%AC%AC%E5%8D%81%E6%AC%A1%E7%AC%94%E8%AE%B0/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          ICT第十次笔记
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2023/01/26/ICT%E7%AC%AC%E5%85%AB%E6%AC%A1%E7%AC%94%E8%AE%B0/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">ICT第八次笔记</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ICT-%E6%95%B0%E9%80%9A/" rel="tag">ICT 数通</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/numpy/" rel="tag">numpy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" rel="tag">python 面向对象</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/ICT-%E6%95%B0%E9%80%9A/" style="font-size: 20px;">ICT 数通</a> <a href="/tags/numpy/" style="font-size: 10px;">numpy</a> <a href="/tags/python-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" style="font-size: 10px;">python 面向对象</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/01/">January 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/12/">December 2022</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/01/26/ICT%E7%AC%AC%E5%8D%81%E4%B8%80%E6%AC%A1%E7%AC%94%E8%AE%B0/">ICT第十一次笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2023/01/26/ICT%E7%AC%AC%E5%8D%81%E6%AC%A1%E7%AC%94%E8%AE%B0/">ICT第十次笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2023/01/26/ICT%E7%AC%AC%E4%B9%9D%E6%AC%A1%E7%AC%94%E8%AE%B0/">ICT第九次笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2023/01/26/ICT%E7%AC%AC%E5%85%AB%E6%AC%A1%E7%AC%94%E8%AE%B0/">ICT第八次笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2023/01/26/ICT%E7%AC%AC%E4%B8%83%E6%AC%A1%E7%AC%94%E8%AE%B0/">ICT第七次笔记</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 懒懒当大厨<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

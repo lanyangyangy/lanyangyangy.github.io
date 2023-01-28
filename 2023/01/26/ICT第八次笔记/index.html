@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>ICT第八次笔记 | 总会有地上的生灵 敢于直面雷霆的威光</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="IPv6IPv6的优势1.“无限”地址空间 		$\textcolor{purple}{地址长度为128bit}$，海量的地址空间，满足物联网等新兴业务、有利于业务演进及扩展。  2.层次化的地址结构 	相较于IPv4地址，IPv6地址的分配更加规范，利于路由聚合（缩减IPv6路由表规模）、路由快速查询。  即插即用 					IPv6支持无状态地址自动配置（SLAAC），终端接入更简单。  简化">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ICT第八次笔记">
+<meta property="og:url" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E5%85%AB%E6%AC%A1%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:site_name" content="总会有地上的生灵 敢于直面雷霆的威光">
+<meta property="og:description" content="IPv6IPv6的优势1.“无限”地址空间 		$\textcolor{purple}{地址长度为128bit}$，海量的地址空间，满足物联网等新兴业务、有利于业务演进及扩展。  2.层次化的地址结构 	相较于IPv4地址，IPv6地址的分配更加规范，利于路由聚合（缩减IPv6路由表规模）、路由快速查询。  即插即用 					IPv6支持无状态地址自动配置（SLAAC），终端接入更简单。  简化">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E5%85%AB%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221127152227390.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E5%85%AB%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221127190507339.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E5%85%AB%E6%AC%A1%E7%AC%94%E8%AE%B0/ICT%E7%AC%AC%E5%85%AB%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221127191153879.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E5%85%AB%E6%AC%A1%E7%AC%94%E8%AE%B0/ICT%E7%AC%AC%E5%85%AB%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221127201430041.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E5%85%AB%E6%AC%A1%E7%AC%94%E8%AE%B0/ICT%E7%AC%AC%E5%85%AB%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221127201523887.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E5%85%AB%E6%AC%A1%E7%AC%94%E8%AE%B0/ICT%E7%AC%AC%E5%85%AB%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221127193808065.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E5%85%AB%E6%AC%A1%E7%AC%94%E8%AE%B0/ICT%E7%AC%AC%E5%85%AB%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221127200001524.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E5%85%AB%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221127200930729.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E5%85%AB%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221127205934813.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E5%85%AB%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221127224159032.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E5%85%AB%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221130233130647.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E5%85%AB%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221130233259212.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E5%85%AB%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221130233633155.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E5%85%AB%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221201000426054.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E5%85%AB%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221201002805753.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E5%85%AB%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221201004352972.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E5%85%AB%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221201170558874.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E5%85%AB%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221201215719946.png">
+<meta property="article:published_time" content="2023-01-26T04:44:53.000Z">
+<meta property="article:modified_time" content="2023-01-28T12:38:33.328Z">
+<meta property="article:author" content="懒懒当大厨">
+<meta property="article:tag" content="ICT 数通">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E5%85%AB%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221127152227390.png">
+  
+    <link rel="alternate" href="/atom.xml" title="总会有地上的生灵 敢于直面雷霆的威光" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">总会有地上的生灵 敢于直面雷霆的威光</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://lanyangyangy.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-ICT第八次笔记" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/01/26/ICT%E7%AC%AC%E5%85%AB%E6%AC%A1%E7%AC%94%E8%AE%B0/" class="article-date">
+  <time class="dt-published" datetime="2023-01-26T04:44:53.000Z" itemprop="datePublished">2023-01-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      ICT第八次笔记
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h4 id="IPv6"><a href="#IPv6" class="headerlink" title="IPv6"></a>IPv6</h4><h5 id="IPv6的优势"><a href="#IPv6的优势" class="headerlink" title="IPv6的优势"></a>IPv6的优势</h5><p>1.“<strong>无限”地址空间</strong> 		$\textcolor{purple}{地址长度为128bit}$，海量的地址空间，满足物联网等新兴业务、有利于业务演进及扩展。 </p>
+<p>2.<strong>层次化的地址结构</strong> 	相较于IPv4地址，IPv6地址的分配更加规范，利于路由聚合（缩减IPv6路由表规模）、路由快速查询。</p>
+<ol start="3">
+<li><strong>即插即用</strong> 					IPv6支持无状态地址自动配置（SLAAC），终端接入更简单。 </li>
+<li><strong>简化的报文头部</strong>         简化报文头，提高效率；通过扩展包头支持新应用，利于路由器等网络设备的转发处理，降低投资成本。 </li>
+<li><strong>安全特性</strong> 				   IPsec、真实源地址认证等保证端到端安全；避免NAT破坏端到端通信的完整性。</li>
+<li><strong>移动性</strong>                      对移动网络实时通信有较大改进，整个移动网络性能有比较大的提升。</li>
+<li><strong>增强的QoS特性</strong>       额外定义了流标签字段，可为应用程序或者终端所用，针对特殊的服务和数据流，分配特定的资源</li>
+</ol>
+<h5 id="IPv4-to-IPv6"><a href="#IPv4-to-IPv6" class="headerlink" title="IPv4 to IPv6"></a>IPv4 to IPv6</h5><p>IPv4网络演变为IPv6网络主要有以下三种技术： </p>
+<ul>
+<li>双栈技术：在一台设备上同时启用IPv4协议栈和IPv6协议栈的技术。</li>
+<li>隧道技术：将一种协议的数据封装在另一种协议中的技术。 </li>
+<li>转换技术：将IPv6地址和IPv4地址进行转换的一种技术。</li>
+</ul>
+<img src="/2023/01/26/ICT%E7%AC%AC%E5%85%AB%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221127152227390.png" class="" title="image-20221127152227390">
+
+
+
+<p>与IPv4地址类似，IPv6也用“IPv6地址&#x2F;掩码长度”的方式来表示IPv6地址。</p>
+<h5 id="IPv6地址格式"><a href="#IPv6地址格式" class="headerlink" title="IPv6地址格式"></a>IPv6地址格式</h5><p>1.首选格式</p>
+<p>冒号分割为8段，每一段16bit，每一段内用十六进制表示。 </p>
+<p> 用“IPv6地址&#x2F;掩码长度”的方式来表示。 </p>
+<p>例如：2001:0DB8:0000:0001:0000:0000:0000:45ff&#x2F;64</p>
+<p>IPv6地址&#x3D;网络前缀+接口标识</p>
+<table>
+<thead>
+<tr>
+<th>IPv6地址或前缀</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>2001::&#x2F;16</td>
+<td>用于IPv6 Internet，类似于IPv4公网地址</td>
+</tr>
+<tr>
+<td>2002::&#x2F;16</td>
+<td>用于6to4隧道</td>
+</tr>
+<tr>
+<td>FE80::&#x2F;10</td>
+<td>链路本地地址前缀，用于本地链路范围内的通信</td>
+</tr>
+<tr>
+<td>FF00::&#x2F;</td>
+<td>组播地址前缀，用于IPv6组播</td>
+</tr>
+<tr>
+<td>::&#x2F;128</td>
+<td>未指定地址，类似于IPv4中的0.0.0.0</td>
+</tr>
+<tr>
+<td>::1&#x2F;12</td>
+<td>环回地址，类似于IPv4中的127.0.0.1</td>
+</tr>
+</tbody></table>
+<h5 id="IPv6地址接口标识"><a href="#IPv6地址接口标识" class="headerlink" title="IPv6地址接口标识"></a>IPv6地址接口标识</h5><p>接口ID可通过三种方式生成：手工配置、系统自动生成、<strong>基于IEEE EUI-64规范生成</strong>。</p>
+<p>基于IEEE EUI-64规范生成使用最为普遍，其是基于接口的MAC地址转为IPv6地址接口标识</p>
+<img src="/2023/01/26/ICT%E7%AC%AC%E5%85%AB%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221127190507339.png" class="" title="image-20221127190507339">
+
+<p>改动：在第四个位置插入FFFE </p>
+<p>​			同时第7bit取反</p>
+<h5 id="IPv6地址类型"><a href="#IPv6地址类型" class="headerlink" title="IPv6地址类型"></a>IPv6地址类型</h5><img src="ICT第八次笔记/image-20221127191153879.png" alt="image-20221127191153879" style="zoom:150%;" />
+
+<p> <strong>单播地址</strong>：标识一个接口，目的地址为单播地址的报文会被送到被标识的接口。   在IPv6中，<strong>一个接口拥有多个IPv6地址是非常常见的现象。</strong></p>
+<p><strong>组播地址</strong>：标识多个接口，目的地址为组播地址的报文会被送到被标识的<strong>所有</strong>接口。只有加入相应组播组的设备接口才会侦听发往该组播地址的报文。</p>
+<p><strong>任播地址</strong>： 任播地址标识一组网络接口（通常属于不同的节点）。目标地址是任播地址的数据包将 发送给其中路由意义上最近的一个网络接口。</p>
+<p>$\textcolor{red}{IPv6没有定义广播地址}$</p>
+<h5 id="GUA-全球单播地址"><a href="#GUA-全球单播地址" class="headerlink" title="GUA(全球单播地址)"></a>GUA(全球单播地址)</h5><p>该类地址全球唯一， 用于需要有互联网访问需求的主机，相当于IPv4的公网地址。</p>
+<img src="ICT第八次笔记/image-20221127201430041.png" alt="image-20221127201430041" style="zoom:150%;" />
+
+<h5 id="ULA"><a href="#ULA" class="headerlink" title="ULA"></a>ULA</h5><p>IPv6私网地址，只能够在内网中使用。该地址空间在 IPv6公网中不可被路由，因此不能直接访问公网。</p>
+<img src="ICT第八次笔记/image-20221127201523887.png" alt="image-20221127201523887" style="zoom:150%;" />
+
+<h5 id="LLA"><a href="#LLA" class="headerlink" title="LLA"></a>LLA</h5><p>IPv6中另一种应用范围受限制的地址类型。 LLA的有效范围是本地链路，	前缀为FE80：：&#x2F;10。</p>
+<img src="ICT第八次笔记/image-20221127193808065.png" alt="image-20221127193808065" style="zoom:150%;" />
+
+<p>• LLA用于一条单一链路层面的通信，例如IPv6地址 无状态自动配置、IPv6邻居发现等。</p>
+<p>• 源或目的IPv6地址为链路本地地址的数据包将不 会被转发到始发的链路之外，换句话说，链路本 地地址的有效范围为本地链路。 </p>
+<p>• 每一个IPv6接口都必须具备一个链路本地地址。 华为设备支持<strong>自动生成</strong>和<strong>手工指定</strong>两种配置方式。</p>
+<h5 id="IPv6组播"><a href="#IPv6组播" class="headerlink" title="IPv6组播"></a>IPv6组播</h5><p>IPv6组播地址</p>
+<p>IPv6组播地址标识某个组，目的为组播地址的报文会被送到该组播组内的成员。组播地址由</p>
+<p>​							前缀 （FF::&#x2F;8）</p>
+<p>​							标志（Flag）字段</p>
+<p>​							范围（Scope）字段</p>
+<p>​							组播组ID</p>
+<img src="ICT第八次笔记/image-20221127200001524.png" alt="image-20221127200001524" style="zoom:150%;" />
+
+<p>组播MAC</p>
+<p>组播MAC的前16bit为“33:33” ，是专门为IPv6组播预留的MAC地址前缀。后32bit从组播IPv6地址 的后32bit直接映射而来。</p>
+<img src="/2023/01/26/ICT%E7%AC%AC%E5%85%AB%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221127200930729.png" class="" title="image-20221127200930729">
+
+
+
+
+
+
+
+<h5 id="静态路由"><a href="#静态路由" class="headerlink" title="静态路由"></a>静态路由</h5><img src="/2023/01/26/ICT%E7%AC%AC%E5%85%AB%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221127205934813.png" class="" title="image-20221127205934813">
+
+<p>基础配置：</p>
+<p>AR5:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[Huawei]ipv6</span><br><span class="line">[Huawei]int g0/0/1</span><br><span class="line">[Huawei-GigabitEthernet0/0/1]ipv6 enable</span><br><span class="line">[Huawei-GigabitEthernet0/0/1]ipv6 address 2012::1/64 </span><br></pre></td></tr></table></figure>
+
+<p>AR6</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[Huawei]ipv6</span><br><span class="line">[Huawei]int g0/0/0</span><br><span class="line">[Huawei-GigabitEthernet0/0/0]ipv6 enable</span><br><span class="line">[Huawei-GigabitEthernet0/0/0]ipv6 address 2012::2/64 </span><br><span class="line">[Huawei-GigabitEthernet0/0/0]int loop 0</span><br><span class="line">[Huawei-LoopBack0]ipv6 en</span><br><span class="line">[Huawei-LoopBack0]ipv6 address 2022::1 64</span><br></pre></td></tr></table></figure>
+
+<p>静态路由：</p>
+<p>AR5：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[Huawei]ipv6 route-static 2022:: 64 2012::2</span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="动态路由"><a href="#动态路由" class="headerlink" title="动态路由"></a>动态路由</h5><h6 id="ospfv3"><a href="#ospfv3" class="headerlink" title="ospfv3"></a>ospfv3</h6><p>Router ID  来源方式 手动配置 环回口  物理口</p>
+<p>AR5</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[Huawei]ospfv3</span><br><span class="line">[Huawei-ospfv3-1]router-id 1.1.1.1</span><br><span class="line">[Huawei-ospfv3-1]area 0</span><br><span class="line">[Huawei-ospfv3-1-area-0.0.0.0]quit</span><br><span class="line">[Huawei-ospfv3-1]int g0/0/1</span><br><span class="line">[Huawei-GigabitEthernet0/0/1]ospfv3 1 area 0</span><br></pre></td></tr></table></figure>
+
+<p>AR6</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">[Huawei]ospfv3 </span><br><span class="line">[Huawei-ospfv3-1]router-id 2.2.2.2</span><br><span class="line">[Huawei-ospfv3-1]area 0</span><br><span class="line">[Huawei-ospfv3-1-area-0.0.0.0]quit</span><br><span class="line">[Huawei-ospfv3-1]int g0/0/0</span><br><span class="line">[Huawei-GigabitEthernet0/0/0]ospfv3 1 area 0</span><br><span class="line">[Huawei-GigabitEthernet0/0/0]int g0/0/1</span><br><span class="line">Huawei-GigabitEthernet0/0/1]ipv6 add	</span><br><span class="line">[Huawei-GigabitEthernet0/0/1]ipv6 address 2023::1 64</span><br><span class="line">[Huawei-GigabitEthernet0/0/1]ospfv3 1 area 0</span><br></pre></td></tr></table></figure>
+
+<p>AR7</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[Huawei]ipv6</span><br><span class="line">[Huawei]int g0/0/0</span><br><span class="line">[Huawei-GigabitEthernet0/0/0]ipv6 en</span><br><span class="line">[Huawei-GigabitEthernet0/0/0]ipv6 add 2022::2 64</span><br><span class="line">[Huawei-GigabitEthernet0/0/0]quit</span><br><span class="line">[Huawei]ospfv3</span><br><span class="line">[Huawei-ospfv3-1]router-id 3.3.3.3</span><br><span class="line">[Huawei-ospfv3-1]area 0</span><br><span class="line">[Huawei-ospfv3-1-area-0.0.0.0]quit</span><br><span class="line">[Huawei]int g0/0/0</span><br><span class="line">[Huawei-GigabitEthernet0/0/0]ospfv3 1 area 0</span><br><span class="line">[Huawei-GigabitEthernet0/0/0]quit</span><br></pre></td></tr></table></figure>
+
+
+
+<p>查看邻居关系</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">display ospfv3 peer</span><br></pre></td></tr></table></figure>
+
+<h6 id="BGP"><a href="#BGP" class="headerlink" title="BGP"></a>BGP</h6><p>R5</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[Huawei]bgp 1</span><br><span class="line">[Huawei-bgp]router-id 1.1.1.1 </span><br><span class="line">[Huawei-bgp]peer 2022::2 as-number 1</span><br><span class="line">[Huawei-bgp]ipv6-family unicast</span><br><span class="line">[Huawei-bgp-af-ipv6]peer 2022::2 enable</span><br></pre></td></tr></table></figure>
+
+<p>R7</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[Huawei]bgp 1</span><br><span class="line">[Huawei-bgp]router-id 3.3.3.3 </span><br><span class="line">[Huawei-bgp]peer 2012::1 as-number 1</span><br><span class="line">[Huawei-bgp]ipv6-family unicast</span><br><span class="line">[Huawei-bgp-af-ipv6]peer 2012::1 enable</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">display bgp ipv6 peer   //查看bgp邻居状态</span><br></pre></td></tr></table></figure>
+
+<img src="/2023/01/26/ICT%E7%AC%AC%E5%85%AB%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221127224159032.png" class="" title="image-20221127224159032">
+
+
+
+
+
+<h5 id="ICMPv6"><a href="#ICMPv6" class="headerlink" title="ICMPv6"></a>ICMPv6</h5><p>Path MTU</p>
+<img src="/2023/01/26/ICT%E7%AC%AC%E5%85%AB%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221130233130647.png" class="" title="image-20221130233130647">
+
+<img src="/2023/01/26/ICT%E7%AC%AC%E5%85%AB%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221130233259212.png" class="" title="image-20221130233259212">
+
+<img src="/2023/01/26/ICT%E7%AC%AC%E5%85%AB%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221130233633155.png" class="" title="image-20221130233633155">
+
+<h5 id="无状态自动配置"><a href="#无状态自动配置" class="headerlink" title="无状态自动配置"></a>无状态自动配置</h5><img src="/2023/01/26/ICT%E7%AC%AC%E5%85%AB%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221201000426054.png" class="" title="image-20221201000426054">
+
+<p>1.在R1&#x2F;R2（$\textcolor{blue}{服务端&#x2F;用户端}$)使能IPv6，并且让接口自动生成链路本地地址</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;Huawei&gt;sysname</span><br><span class="line"></span><br><span class="line">[Huawei]sysname R1</span><br><span class="line">[R1]ipv6</span><br><span class="line">[R1]int g0/0/0</span><br><span class="line">[R1-GigabitEthernet0/0/0]ipv6 enable   端口启用IPv6</span><br><span class="line">[R1-GigabitEthernet0/0/0]ipv6 address auto link-local   #接口生成link-local地址</span><br></pre></td></tr></table></figure>
+
+<p>同理R2($\textcolor{blue}{用户端}$)的配置与R1一致</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;Huawei&gt;sys</span><br><span class="line">[Huawei]sysname R2</span><br><span class="line">[R2]ipv6</span><br><span class="line">[R2]int g0/0/0</span><br><span class="line">[R2-GigabitEthernet0/0/0]ipv6 enable</span><br><span class="line">[R2-GigabitEthernet0/0/0]ipv6 address auto link-local</span><br></pre></td></tr></table></figure>
+
+<pre><code> 2.在R2($\textcolor&#123;blue&#125;&#123;用户端&#125;$)的接口上配置IPv6全球单播地址
+</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[R2]int g0/0/0</span><br><span class="line">[R2-GigabitEthernet0/0/0]ipv6 address 2001::2/64</span><br></pre></td></tr></table></figure>
+
+<p>3.在R2（$\textcolor{blue}{用户端}$）使能发布RA报文的功能。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[R2-GigabitEthernet0/0/0]undo ipv6 nd ra halt</span><br></pre></td></tr></table></figure>
+
+<p>4.配置R1（$\textcolor{blue}{服务器}$）的GE0&#x2F;0&#x2F;0接口自动火区IPv6地址。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[R1]int g0/0/0</span><br><span class="line">[R1-GigabitEthernet0/0/0]ipv6 address auto global</span><br></pre></td></tr></table></figure>
+
+<p>5.检查R1的IP地址</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[R1]display ipv6 interface brief </span><br></pre></td></tr></table></figure>
+
+<img src="/2023/01/26/ICT%E7%AC%AC%E5%85%AB%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221201002805753.png" class="" title="image-20221201002805753">
+
+<h5 id="DHCPv6配置"><a href="#DHCPv6配置" class="headerlink" title="DHCPv6配置"></a>DHCPv6配置</h5><p>1.配置R2接口IPv6信息</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[R2]int g0/0/1</span><br><span class="line">[R2-GigabitEthernet0/0/1]ipv6 enable </span><br><span class="line">[R2-GigabitEthernet0/0/1]ipv6 address 2002::2/64</span><br><span class="line">[R2-GigabitEthernet0/0/1]ipv6 address auto link-local</span><br><span class="line">[R2-GigabitEthernet0/0/1]undo ipv6 nd ra halt</span><br></pre></td></tr></table></figure>
+
+<p>2.配置R2上的DHCPv6服务器功能</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[R2]dhcp enable </span><br><span class="line">[R2]dhcpv6 pool pool1</span><br><span class="line">[R2-dhcpv6-pool-pool1]address prefix 2002::/64</span><br><span class="line">[R2-dhcpv6-pool-pool1]excluded-address 2002::1</span><br><span class="line">[R2-dhcpv6-pool-pool1]dns-server 240e:47:0:701::1</span><br><span class="line">[R2-dhcpv6-pool-pool1]int g0/0/1</span><br><span class="line">[R2-GigabitEthernet0/0/1]dhcpv6 server pool1</span><br></pre></td></tr></table></figure>
+
+<p>3.在R3的G0&#x2F;0&#x2F;0接口通过dhcpv6获取ipv6地址</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[Huawei]ipv6</span><br><span class="line">[Huawei]dhcp enable</span><br><span class="line">[Huawei]int g0/0/0</span><br><span class="line">[Huawei-GigabitEthernet0/0/0]ipv6 enable</span><br><span class="line">[Huawei-GigabitEthernet0/0/0]ipv6 address auto link-local</span><br><span class="line">[Huawei-GigabitEthernet0/0/0]ipv6 address auto dhcp</span><br></pre></td></tr></table></figure>
+
+<p>4.查看获取到的IPv6地址</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">display ipv6 interface brief</span><br></pre></td></tr></table></figure>
+
+<img src="/2023/01/26/ICT%E7%AC%AC%E5%85%AB%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221201004352972.png" class="" title="image-20221201004352972">
+
+<h5 id="IP4-IPv6"><a href="#IP4-IPv6" class="headerlink" title="IP4-IPv6"></a>IP4-IPv6</h5><p>实验</p>
+<img src="/2023/01/26/ICT%E7%AC%AC%E5%85%AB%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221201170558874.png" class="" title="image-20221201170558874">
+
+<p>图上所示地址均已配置</p>
+<p>先在R1上配置</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;R1&gt;sys</span><br><span class="line">[R1]interface Tunnel 0/0/0</span><br><span class="line">[R1-Tunnel0/0/0]tunnel-protocol ipv4-ipv6</span><br><span class="line">[R1-Tunnel0/0/0]source 2012::1</span><br><span class="line">[R1-Tunnel0/0/0]destination 2023::3</span><br><span class="line">[R1-Tunnel0/0/0]ip address 13.1.1.1 24</span><br></pre></td></tr></table></figure>
+
+<p>R3配置</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;R3&gt;sys</span><br><span class="line">[R3]interface Tunnel 0/0/0</span><br><span class="line">[R3-Tunnel0/0/0]tunnel-protocol ipv4-ipv6</span><br><span class="line">[R3-Tunnel0/0/0]source 2023::3</span><br><span class="line">[R3-Tunnel0/0/0]destination 2012::1</span><br><span class="line">[R3-Tunnel0/0/0]ip address 13.1.1.3 24</span><br></pre></td></tr></table></figure>
+
+<p>再配置R1、R3的路由</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">R1</span><br><span class="line"></span><br><span class="line">[R1]ospf 1</span><br><span class="line">[R1-ospf-1]area 0</span><br><span class="line">[R1-ospf-1-area-0.0.0.0]netw	</span><br><span class="line">[R1-ospf-1-area-0.0.0.0]network 13.1.1.0 0.0.0.255</span><br><span class="line">[R1-ospf-1-area-0.0.0.0]net	</span><br><span class="line">[R1-ospf-1-area-0.0.0.0]network 192.168.1.0 0.0.0.255</span><br><span class="line"></span><br><span class="line">R3</span><br><span class="line"></span><br><span class="line">[R3]ospf 1</span><br><span class="line">[R3-ospf-1]area 0</span><br><span class="line">[R3-ospf-1-area-0.0.0.0]netw	</span><br><span class="line">[R3-ospf-1-area-0.0.0.0]network 192.168.2.0 0.0.0.255</span><br><span class="line">[R3-ospf-1-area-0.0.0.0]netw	</span><br><span class="line">[R3-ospf-1-area-0.0.0.0]network 13.1.1.0 0.0.0.255</span><br></pre></td></tr></table></figure>
+
+<h5 id="IPV6-IPV4"><a href="#IPV6-IPV4" class="headerlink" title="IPV6-IPV4"></a>IPV6-IPV4</h5><img src="/2023/01/26/ICT%E7%AC%AC%E5%85%AB%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221201215719946.png" class="" title="image-20221201215719946">
+
+<h6 id="实验配置"><a href="#实验配置" class="headerlink" title="实验配置"></a>实验配置</h6><p>R1：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;R1&gt;sys</span><br><span class="line">[R1]interface Tunnel0/0/0</span><br><span class="line">[R1-Tunnel0/0/0] ipv6 enable </span><br><span class="line">[R1-Tunnel0/0/0] ipv6 address auto link-local</span><br><span class="line">[R1-Tunnel0/0/0] tunnel-protocol ipv6-ipv4 6to4</span><br><span class="line">[R1-Tunnel0/0/0] source 12.1.1.1</span><br><span class="line">[R1-Tunnel0/0/0]quit</span><br><span class="line">[R1]ipv6  route-static 2002:1701:0103:: 64 Tunnel 0/0/0</span><br></pre></td></tr></table></figure>
+
+<p>R2</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[R2] interface Tunnel0/0/0</span><br><span class="line">[R2-Tunnel0/0/0] ipv6 enable </span><br><span class="line">[R2-Tunnel0/0/0] ipv6 address auto link-local</span><br><span class="line">Info: Please enable IPv6 function in system view. </span><br><span class="line">[R2-Tunnel0/0/0] tunnel-protocol ipv6-ipv4 6to4</span><br><span class="line">[R2-Tunnel0/0/0] source 23.1.1.3</span><br><span class="line">[R2-Tunnel0/0/0]quit</span><br><span class="line">[R2]ipv6 route-static 2001:0c01:0101:: 64 Tunnel 0/0/0   </span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E5%85%AB%E6%AC%A1%E7%AC%94%E8%AE%B0/" data-id="cldfxvtag000dvg9u2bdg5q67" data-title="ICT第八次笔记" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ICT-%E6%95%B0%E9%80%9A/" rel="tag">ICT 数通</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/01/26/ICT%E7%AC%AC%E4%B9%9D%E6%AC%A1%E7%AC%94%E8%AE%B0/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          ICT第九次笔记
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2023/01/26/ICT%E7%AC%AC%E4%B8%83%E6%AC%A1%E7%AC%94%E8%AE%B0/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">ICT第七次笔记</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ICT-%E6%95%B0%E9%80%9A/" rel="tag">ICT 数通</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/numpy/" rel="tag">numpy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" rel="tag">python 面向对象</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/ICT-%E6%95%B0%E9%80%9A/" style="font-size: 20px;">ICT 数通</a> <a href="/tags/numpy/" style="font-size: 10px;">numpy</a> <a href="/tags/python-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" style="font-size: 10px;">python 面向对象</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/01/">January 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/12/">December 2022</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/01/26/ICT%E7%AC%AC%E5%8D%81%E4%B8%80%E6%AC%A1%E7%AC%94%E8%AE%B0/">ICT第十一次笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2023/01/26/ICT%E7%AC%AC%E5%8D%81%E6%AC%A1%E7%AC%94%E8%AE%B0/">ICT第十次笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2023/01/26/ICT%E7%AC%AC%E4%B9%9D%E6%AC%A1%E7%AC%94%E8%AE%B0/">ICT第九次笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2023/01/26/ICT%E7%AC%AC%E5%85%AB%E6%AC%A1%E7%AC%94%E8%AE%B0/">ICT第八次笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2023/01/26/ICT%E7%AC%AC%E4%B8%83%E6%AC%A1%E7%AC%94%E8%AE%B0/">ICT第七次笔记</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 懒懒当大厨<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>ICT第十次笔记 | 总会有地上的生灵 敢于直面雷霆的威光</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="MPLS VPNVPN网络架构：CE、PE、P    PE和P是运营商设备，CE是用户端设备 MPLS VPN技术架构   VRF（虚拟路由转发），又称VPN实例，是MPLS VPN架构的关键级数，每一个VPN实例使用独立的路由转发表项，实现VPN之间的逻辑隔离。 RD   本地 RT    全局   实验配置： 配置一   配置VPN-instance：PE1： 1234567891011121">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ICT第十次笔记">
+<meta property="og:url" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E5%8D%81%E6%AC%A1%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:site_name" content="总会有地上的生灵 敢于直面雷霆的威光">
+<meta property="og:description" content="MPLS VPNVPN网络架构：CE、PE、P    PE和P是运营商设备，CE是用户端设备 MPLS VPN技术架构   VRF（虚拟路由转发），又称VPN实例，是MPLS VPN架构的关键级数，每一个VPN实例使用独立的路由转发表项，实现VPN之间的逻辑隔离。 RD   本地 RT    全局   实验配置： 配置一   配置VPN-instance：PE1： 1234567891011121">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E5%8D%81%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221213162743454.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E5%8D%81%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221213160415097.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E5%8D%81%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221215151533537.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E5%8D%81%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221215151647024.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E5%8D%81%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221215151808024.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E5%8D%81%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221215162527027.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E5%8D%81%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221215162540749.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E5%8D%81%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221216155617686.png">
+<meta property="og:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E5%8D%81%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221216175529751.png">
+<meta property="article:published_time" content="2023-01-26T04:52:15.000Z">
+<meta property="article:modified_time" content="2023-01-28T12:37:51.083Z">
+<meta property="article:author" content="懒懒当大厨">
+<meta property="article:tag" content="ICT 数通">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E5%8D%81%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221213162743454.png">
+  
+    <link rel="alternate" href="/atom.xml" title="总会有地上的生灵 敢于直面雷霆的威光" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">总会有地上的生灵 敢于直面雷霆的威光</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://lanyangyangy.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-ICT第十次笔记" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/01/26/ICT%E7%AC%AC%E5%8D%81%E6%AC%A1%E7%AC%94%E8%AE%B0/" class="article-date">
+  <time class="dt-published" datetime="2023-01-26T04:52:15.000Z" itemprop="datePublished">2023-01-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      ICT第十次笔记
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h4 id="MPLS-VPN"><a href="#MPLS-VPN" class="headerlink" title="MPLS VPN"></a>MPLS VPN</h4><p>VPN网络架构：CE、PE、P    PE和P是运营商设备，CE是用户端设备</p>
+<p>MPLS VPN技术架构</p>
+<img src="/2023/01/26/ICT%E7%AC%AC%E5%8D%81%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221213162743454.png" class="" title="image-20221213162743454">
+
+<p>VRF（虚拟路由转发），又称VPN实例，是MPLS VPN架构的关键级数，每一个VPN实例使用独立的路由转发表项，实现VPN之间的逻辑隔离。</p>
+<p>RD   本地</p>
+<p>RT    全局</p>
+<img src="/2023/01/26/ICT%E7%AC%AC%E5%8D%81%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221213160415097.png" class="" title="image-20221213160415097">
+
+<p>实验配置：</p>
+<h6 id="配置一-配置VPN-instance："><a href="#配置一-配置VPN-instance：" class="headerlink" title="配置一   配置VPN-instance："></a>配置一   配置VPN-instance：</h6><p>PE1：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">[Huawei]sys PE1</span><br><span class="line">[PE1]ip vpn-instance CEA</span><br><span class="line"></span><br><span class="line">[PE1-vpn-instance-CEA] ipv4-family</span><br><span class="line">[PE1-vpn-instance-CEA-af-ipv4]</span><br><span class="line">[PE1-vpn-instance-CEA-af-ipv4]  route-distinguisher 1:1</span><br><span class="line">[PE1-vpn-instance-CEA-af-ipv4]</span><br><span class="line">[PE1-vpn-instance-CEA-af-ipv4]  vpn-target 1:1 export-extcommunity</span><br><span class="line">[PE1-vpn-instance-CEA-af-ipv4]  vpn-target 1:1 import-extcommunity</span><br><span class="line"></span><br><span class="line">[PE1-vpn-instance-CEA-af-ipv4]ip vpn-instance CEB</span><br><span class="line">[PE1-vpn-instance-CEB] ipv4-family</span><br><span class="line">[PE1-vpn-instance-CEB-af-ipv4]  route-distinguisher 2:2</span><br><span class="line">[PE1-vpn-instance-CEB-af-ipv4]</span><br><span class="line">[PE1-vpn-instance-CEB-af-ipv4]  vpn-target 2:2 export-extcommunity</span><br><span class="line">[PE1-vpn-instance-CEB-af-ipv4]  vpn-target 2:2 import-extcommunity</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>PE2:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">[Huawei]sys PE1</span><br><span class="line">[PE2]ip vpn-instance CEA</span><br><span class="line"></span><br><span class="line">[PE2-vpn-instance-CEA] ipv4-family</span><br><span class="line">[PE2-vpn-instance-CEA-af-ipv4]</span><br><span class="line">[PE2-vpn-instance-CEA-af-ipv4]  route-distinguisher 1:1</span><br><span class="line">[PE2-vpn-instance-CEA-af-ipv4]</span><br><span class="line">[PE2-vpn-instance-CEA-af-ipv4]  vpn-target 1:1 export-extcommunity</span><br><span class="line">[PE2-vpn-instance-CEA-af-ipv4]  vpn-target 1:1 import-extcommunity</span><br><span class="line"></span><br><span class="line">[PE2-vpn-instance-CEA-af-ipv4]ip vpn-instance CEB</span><br><span class="line">[PE2-vpn-instance-CEB] ipv4-family</span><br><span class="line">[PE2-vpn-instance-CEB-af-ipv4]  route-distinguisher 2:2</span><br><span class="line">[PE2-vpn-instance-CEB-af-ipv4]</span><br><span class="line">[PE2-vpn-instance-CEB-af-ipv4]  vpn-target 2:2 export-extcommunity</span><br><span class="line">[PE2-vpn-instance-CEB-af-ipv4]  vpn-target 2:2 import-extcommunity</span><br></pre></td></tr></table></figure>
+
+<h6 id="配置二-将接口划入对应VPN实例："><a href="#配置二-将接口划入对应VPN实例：" class="headerlink" title="配置二 	将接口划入对应VPN实例："></a>配置二 	将接口划入对应VPN实例：</h6><p>PE1：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[PE1]inter g0/0/0</span><br><span class="line">[PE1-GigabitEthernet0/0/0]ip binding vpn-instance CEA</span><br><span class="line">[PE1-GigabitEthernet0/0/0]ip add 10.1.1.1 24</span><br><span class="line">[PE1-GigabitEthernet0/0/0]inter g0/0/1</span><br><span class="line">[PE1-GigabitEthernet0/0/1]ip binding vpn-instance CEB</span><br><span class="line">[PE1-GigabitEthernet0/0/1]ip add 10.1.1.1 24</span><br></pre></td></tr></table></figure>
+
+<p>PE2:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[PE2]inter g0/0/1</span><br><span class="line">[PE2-GigabitEthernet0/0/1]ip binding vpn-instance CEA</span><br><span class="line">[PE2-GigabitEthernet0/0/1]ip add 10.1.2.1 24</span><br><span class="line">[PE2]inter g0/0/2</span><br><span class="line">[PE2-GigabitEthernet0/0/2]ip binding vpn-instance CEB</span><br><span class="line">[PE2-GigabitEthernet0/0/2]ip add 10.1.2.1 24</span><br></pre></td></tr></table></figure>
+
+
+
+<p>此时我们通过 display ip interface brief 查询端口链路IP时可以发现PE1的两个接口IP是一样的。</p>
+<img src="/2023/01/26/ICT%E7%AC%AC%E5%8D%81%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221215151533537.png" class="" title="image-20221215151533537">
+
+<p>但是在通过 display ip routing-table 并查不到路由</p>
+<img src="/2023/01/26/ICT%E7%AC%AC%E5%8D%81%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221215151647024.png" class="" title="image-20221215151647024">
+
+<p>应使用display ip routing-table vpn-instance xx 进行查询，如：</p>
+<img src="/2023/01/26/ICT%E7%AC%AC%E5%8D%81%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221215151808024.png" class="" title="image-20221215151808024">
+
+
+
+<h6 id="配置三-配置客户到ISP路由协议OSPF"><a href="#配置三-配置客户到ISP路由协议OSPF" class="headerlink" title="配置三 	配置客户到ISP路由协议OSPF"></a>配置三 	配置客户到ISP路由协议OSPF</h6><p>CE1-A</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[CE1-A]inter g0/0/0</span><br><span class="line">[CE1-A-GigabitEthernet0/0/0]ip add 10.1.1.2 24 </span><br><span class="line"></span><br><span class="line">[CE1-A]int loopback 0</span><br><span class="line">[CE1-A-LoopBack0]ip add 4.4.4.4 32</span><br><span class="line">[CE1-A-LoopBack0]quit</span><br><span class="line"></span><br><span class="line">[CE1-A]ospf 1</span><br><span class="line">[CE1-A-ospf-1]area 0</span><br><span class="line">[CE1-A-ospf-1-area-0.0.0.0]net	</span><br><span class="line">[CE1-A-ospf-1-area-0.0.0.0]network  4.4.4.4 0.0.0.0	</span><br><span class="line">[CE1-A-ospf-1-area-0.0.0.0]network 10.1.1.0 0.0.0.255</span><br></pre></td></tr></table></figure>
+
+<p>CE2-A</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">[CE2-A]inter g0/0/0</span><br><span class="line">[CE2-A-GigabitEthernet0/0/0]ip add 10.1.2.2 24 </span><br><span class="line"></span><br><span class="line">[CE2-A-GigabitEthernet0/0/0]inter lo 0 </span><br><span class="line">[CE2-A-LoopBack0]ip add 5.5.5.5 32</span><br><span class="line"></span><br><span class="line">[CE2-A]ospf 1 </span><br><span class="line">[CE2-A-ospf-1]area 0 </span><br><span class="line">[CE2-A-ospf-1-area-0.0.0.0]network 10.1.2.0 0.0.0.255</span><br><span class="line">[CE2-A-ospf-1-area-0.0.0.0]network 5.5.5.5 0.0.0.0</span><br></pre></td></tr></table></figure>
+
+<p> PE1:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[PE1]ospf vpn-instance CEA 1    #在VRF路由器CEA上启用ospf进程1    进程号全局唯一</span><br><span class="line">[PE1-ospf-1]area 0 </span><br><span class="line">[PE1-ospf-1-area-0.0.0.0]network 10.1.1.0 0.0.0.255</span><br></pre></td></tr></table></figure>
+
+<p>PE2:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[PE2]ospf vpn-instance CEA 1 </span><br><span class="line">[PE2-ospf-1]area 0 </span><br><span class="line">[PE2-ospf-1-area-0.0.0.0]network 10.1.2.0 0.0.0.255</span><br></pre></td></tr></table></figure>
+
+<p>检查：</p>
+<p>display ip routing-table vpn-instance CEA  </p>
+<img src="/2023/01/26/ICT%E7%AC%AC%E5%8D%81%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221215162527027.png" class="" title="image-20221215162527027">
+
+<img src="/2023/01/26/ICT%E7%AC%AC%E5%8D%81%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221215162540749.png" class="" title="image-20221215162540749">
+
+<p>ping -vpn-instance CEA 10.1.1.2</p>
+<h6 id="配置四-配置ISP路由器IP地址信息-："><a href="#配置四-配置ISP路由器IP地址信息-：" class="headerlink" title="配置四  	配置ISP路由器IP地址信息 ："></a>配置四  	配置ISP路由器IP地址信息 ：</h6><p>PE1:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[PE1]int g0/0/2</span><br><span class="line">[PE1-GigabitEthernet0/0/2]ip add 12.1.1.1 24</span><br><span class="line">[PE1-GigabitEthernet0/0/2]int lo 0</span><br><span class="line">[PE1-LoopBack0]ip add 1.1.1.1 32</span><br></pre></td></tr></table></figure>
+
+<p>P:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[P]int g0/0/0</span><br><span class="line">[P-GigabitEthernet0/0/0]ip add 12.1.1.2 24</span><br><span class="line">[P-GigabitEthernet0/0/0]inter g0/0/1</span><br><span class="line">[P-GigabitEthernet0/0/1]ip add 23.1.1.2 24</span><br><span class="line">[P-GigabitEthernet0/0/1]inter lo 0</span><br><span class="line">[P-LoopBack0]ip add 2.2.2.2 24</span><br></pre></td></tr></table></figure>
+
+<p>PE2：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[PE2]inter g0/0/0</span><br><span class="line">[PE2-GigabitEthernet0/0/0]ip add 23.1.1.3 24</span><br><span class="line">[PE2-GigabitEthernet0/0/0]inter lo 0</span><br><span class="line">[PE2-LoopBack0]ip add 3.3.3.3 24</span><br></pre></td></tr></table></figure>
+
+<h6 id="配置五配置单播路由协议ospf-："><a href="#配置五配置单播路由协议ospf-：" class="headerlink" title="配置五	配置单播路由协议ospf ："></a>配置五	配置单播路由协议ospf ：</h6><p>PE1：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[PE1]ospf 2</span><br><span class="line">[PE1-ospf-2]area 0	</span><br><span class="line">[PE1-ospf-2-area-0.0.0.0]network 12.1.1.0 0.0.0.255</span><br><span class="line">[PE1-ospf-2-area-0.0.0.0]network 1.1.1.1 0.0.0.0</span><br></pre></td></tr></table></figure>
+
+<p>P:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[PE2]ospf 2 </span><br><span class="line">[PE2-ospf-2]area 0</span><br><span class="line">[PE2-ospf-2-area-0.0.0.0]network 12.1.1.0 0.0.0.255</span><br><span class="line">[PE2-ospf-2-area-0.0.0.0]network 23.1.1.0 0.0.0.255</span><br><span class="line">[PE2-ospf-2-area-0.0.0.0]network 2.2.2.2 0.0.0.0</span><br></pre></td></tr></table></figure>
+
+<p>PE2:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[PE2]ospf 2 </span><br><span class="line">[PE2-ospf-2]area 0</span><br><span class="line">[PE2-ospf-2-area-0.0.0.0]network 23.1.1.0 0.0.0.255</span><br><span class="line">[PE2-ospf-2-area-0.0.0.0]network 3.3.3.3 0.0.0.0</span><br></pre></td></tr></table></figure>
+
+<h6 id="配置六配置MP-BGP"><a href="#配置六配置MP-BGP" class="headerlink" title="配置六	配置MP BGP"></a>配置六	配置MP BGP</h6><p>PE1：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[PE1]bgp 123</span><br><span class="line">[PE1-bgp]peer 3.3.3.3 as-number 123</span><br><span class="line">[PE1-bgp]peer 3.3.3.3 connect-interface lo 0 </span><br><span class="line">[PE1-bgp]ipv4-family  vpnv4 unicast </span><br><span class="line"></span><br><span class="line">[PE1-bgp-af-vpnv4]peer 3.3.3.3 enable </span><br></pre></td></tr></table></figure>
+
+<p>PE2:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[PE2]bgp 123</span><br><span class="line">[PE2-bgp]peer 1.1.1.1 as-number 123</span><br><span class="line">[PE2-bgp]peer 1.1.1.1 connect-interface lo 0 </span><br><span class="line">[PE2-bgp]ipv4-family vpnv4 unicast </span><br><span class="line">[PE2-bgp-af-vpnv4]peer 1.1.1.1 enable </span><br></pre></td></tr></table></figure>
+
+<p>通过 display bgp vpnv4 all peer来检查</p>
+<img src="/2023/01/26/ICT%E7%AC%AC%E5%8D%81%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221216155617686.png" class="" title="image-20221216155617686">
+
+<h6 id="配置七路由引入"><a href="#配置七路由引入" class="headerlink" title="配置七	路由引入"></a>配置七	路由引入</h6><p>PE1：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[PE1]ospf 1 vpn-instance CEA</span><br><span class="line">[PE1-ospf-1] import-route bgp</span><br><span class="line">[PE1-ospf-1]bgp 123</span><br><span class="line">[PE1-bgp]ipv4-family vpn-instance CEA </span><br><span class="line">[PE1-bgp-CEA]  import-route direct</span><br><span class="line">[PE1-bgp-CEA]  import-route ospf 1</span><br></pre></td></tr></table></figure>
+
+<p>PE2:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[PE2]bgp 123</span><br><span class="line">[PE2-bgp] ipv4-family vpn-instance CEA </span><br><span class="line">[PE2-bgp-CEA]  import-route ospf 1</span><br><span class="line">[PE2-bgp-CEA]ospf 1 vpn-instance CEA</span><br><span class="line">[PE2-ospf-1] import-route bgp</span><br></pre></td></tr></table></figure>
+
+<h6 id="配置八配置MPLS转发及LDP便签分发协议"><a href="#配置八配置MPLS转发及LDP便签分发协议" class="headerlink" title="配置八	配置MPLS转发及LDP便签分发协议"></a>配置八	配置MPLS转发及LDP便签分发协议</h6><p>PE1:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">[PE1]mpls lsr-id 1.1.1.1 </span><br><span class="line">[PE1]mpls </span><br><span class="line">[PE1-mpls]mpls ldp</span><br><span class="line">[PE1-mpls-ldp]quit</span><br><span class="line"></span><br><span class="line">[PE1]interface g0/0/2</span><br><span class="line">[PE1-GigabitEthernet0/0/2]mpls </span><br><span class="line">[PE1-GigabitEthernet0/0/2]mpls ldp </span><br><span class="line">[PE1-GigabitEthernet0/0/2]quit</span><br><span class="line">[PE1]route recursive-lookup tunnel </span><br></pre></td></tr></table></figure>
+
+<p>P:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">[P]mpls </span><br><span class="line">[P-mpls]mpls ldp</span><br><span class="line">[P-mpls-ldp]</span><br><span class="line">[P-mpls-ldp]quit</span><br><span class="line"></span><br><span class="line">[P]int g0/0/0</span><br><span class="line">[P-GigabitEthernet0/0/0]mpls </span><br><span class="line">[P-GigabitEthernet0/0/0]mpls ldp</span><br><span class="line"></span><br><span class="line">[P-GigabitEthernet0/0/0]int g0/0/1</span><br><span class="line">[P-GigabitEthernet0/0/1]mpls </span><br><span class="line">[P-GigabitEthernet0/0/1]mpls ldp</span><br><span class="line">[P-GigabitEthernet0/0/1]quit</span><br><span class="line"></span><br><span class="line">[P]route recursive-lookup tunnel</span><br></pre></td></tr></table></figure>
+
+<p>PE2:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[PE2]mpls lsr-id 3.3.3.3</span><br><span class="line">[PE2]mpls </span><br><span class="line">[PE2]mpls ldp </span><br><span class="line"></span><br><span class="line">[PE2]interface GigabitEthernet 0/0/0</span><br><span class="line">[PE2-GigabitEthernet0/0/0]mpls </span><br><span class="line">[PE2-GigabitEthernet0/0/0]mpls ldp </span><br><span class="line">[PE2]route recursive-lookup tunnel </span><br></pre></td></tr></table></figure>
+
+<p>配置九	确保client1和client2之间互通</p>
+<p>PE1:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[PE1]bgp 123</span><br><span class="line">[PE1-bgp]ipv4-family vpn-instance CEB</span><br><span class="line">[PE1-bgp-CEB]import-route direct </span><br></pre></td></tr></table></figure>
+
+<p>PE2:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[PE2]bgp 123</span><br><span class="line">[PE2-bgp]ipv4-family vpn-instance CEB</span><br><span class="line">[PE2-bgp-CEB]import-route direct </span><br></pre></td></tr></table></figure>
+
+
+
+<p>总结</p>
+<img src="/2023/01/26/ICT%E7%AC%AC%E5%8D%81%E6%AC%A1%E7%AC%94%E8%AE%B0/image-20221216175529751.png" class="" title="image-20221216175529751">
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://lanyangyangy.github.io/2023/01/26/ICT%E7%AC%AC%E5%8D%81%E6%AC%A1%E7%AC%94%E8%AE%B0/" data-id="cldfxvtai000hvg9ubauchoxi" data-title="ICT第十次笔记" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ICT-%E6%95%B0%E9%80%9A/" rel="tag">ICT 数通</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/01/26/ICT%E7%AC%AC%E5%8D%81%E4%B8%80%E6%AC%A1%E7%AC%94%E8%AE%B0/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          ICT第十一次笔记
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2023/01/26/ICT%E7%AC%AC%E4%B9%9D%E6%AC%A1%E7%AC%94%E8%AE%B0/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">ICT第九次笔记</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ICT-%E6%95%B0%E9%80%9A/" rel="tag">ICT 数通</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/numpy/" rel="tag">numpy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" rel="tag">python 面向对象</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/ICT-%E6%95%B0%E9%80%9A/" style="font-size: 20px;">ICT 数通</a> <a href="/tags/numpy/" style="font-size: 10px;">numpy</a> <a href="/tags/python-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" style="font-size: 10px;">python 面向对象</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/01/">January 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/12/">December 2022</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/01/26/ICT%E7%AC%AC%E5%8D%81%E4%B8%80%E6%AC%A1%E7%AC%94%E8%AE%B0/">ICT第十一次笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2023/01/26/ICT%E7%AC%AC%E5%8D%81%E6%AC%A1%E7%AC%94%E8%AE%B0/">ICT第十次笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2023/01/26/ICT%E7%AC%AC%E4%B9%9D%E6%AC%A1%E7%AC%94%E8%AE%B0/">ICT第九次笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2023/01/26/ICT%E7%AC%AC%E5%85%AB%E6%AC%A1%E7%AC%94%E8%AE%B0/">ICT第八次笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2023/01/26/ICT%E7%AC%AC%E4%B8%83%E6%AC%A1%E7%AC%94%E8%AE%B0/">ICT第七次笔记</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 懒懒当大厨<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
